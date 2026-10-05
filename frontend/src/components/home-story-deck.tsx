@@ -162,7 +162,7 @@ export function HomeStoryDeck({ deck, cursor, width, height, onChange, onOpen, o
           })}
         </View>
         {/* Sotto la card: i tre dati della storia attuale (sfumano al cambio card). */}
-        <Animated.View style={belowStyle}><DeckBadges story={deck[cursor]} width={cardWidth} /></Animated.View>
+        <Animated.View style={belowStyle}><DeckBadges story={deck[cursor]} width={cardWidth} neighbors={[deck[cursor - 1], deck[cursor + 1]]} /></Animated.View>
         </View>
       </GestureDetector>
     </View>

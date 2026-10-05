@@ -119,3 +119,8 @@ Frontend NON toccato: reference-3d-v6 resta attivo finché holo-v1 non esiste.
 - Auth = sempre integrazione → `integration_expert` prima di scrivere codice auth.
 - Prima di fermarsi per input utente: `sudo supervisorctl restart expo`.
 - Produzione: pulsante Publish Emergent (non EAS CLI).
+
+## Iterazione — Badge Home in dissolvenza incrociata
+- `src/components/deck-badges.tsx`: al cambio card i 3 dati (Tipo · Categoria · Durata) fanno un crossfade vero (vecchio svanisce mentre il nuovo compare sopra, 180ms, lieve scorrimento verticale), senza vuoto tra i due; interrompibile a metà scorrendo veloce.
+- Prefetch delle icone categoria delle card vicine (`neighbors`) così non compaiono in ritardo.
+- `category-artwork.tsx` esporta `CATEGORY_ART_VERSION`.

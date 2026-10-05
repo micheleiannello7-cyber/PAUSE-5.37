@@ -8,6 +8,7 @@ import { CategoryIcon } from "./category-icon";
 
 export const CATEGORY_VISUAL_MODE: "illustrated" | "line" = "illustrated";
 const ART_VERSION = "reference-3d-v6";
+export const CATEGORY_ART_VERSION = ART_VERSION;
 type ArtworkProps = {
   category: Pick<Category, "id" | "color" | "illustration_generated">;
   testID: string; wide?: boolean; compact?: boolean; cornerRadius?: number;
