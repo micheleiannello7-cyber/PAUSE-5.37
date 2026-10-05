@@ -1,0 +1,28 @@
+{
+  "summary": "Fresh-import smoke test of PAUSE (Expo + FastAPI + Mongo). Backend: 11/11 pytest tests passing — GET /api/health, /api/categories (12 categories: corpo-umano, animali, storia, economia, natura, geografia, cultura, scienza, tecnologia, spazio, arte, psicologia), /api/stories (list + filter + detail with chapters + 404), guest user flow (/api/user/{id}, /api/user/interests, /api/discover-batch, /api/user/{id}/bookmarks, /api/user/{id}/limit-check). Frontend: full guest journey works end-to-end on 390x844 mobile viewport — onboarding renders the premium 'Tell us a bit about you' screen, 'Continue as guest' advances to the Topics picker with all 12 category tiles, selecting Science + 'Start discovering' navigates to /discover with the swipeable story deck (4 free credits visible), tapping a story opens /deep-dive/{id} with hero cover + chapters + 'Scroll to begin'. All four tabs (Home, Topics, Saved, Profile) render without crashes. No red screens, no console errors (only harmless Reanimated/textShadow/pointerEvents deprecation warnings). No deprecated Expo packages (expo-av/expo-barcode-scanner/expo-background-fetch) detected. Stripe/ElevenLabs intentionally not configured (payments gated at 503, ignored per instructions).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "react_native_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_smoke_import_iter_fresh.py",
+    "/app/test_reports/pytest/smoke_import.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Backend .env has no comment lines but contains a working EMERGENT_LLM_KEY; Stripe/ElevenLabs keys intentionally absent so TTS endpoints return 503 (expected per request).",
+    "Frontend uses EXPO_PUBLIC_BACKEND_URL (not EXPO_BACKEND_URL); this is the correct Expo convention — note for future testers reading the system prompt."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_smoke_import_iter_fresh.py (new regression smoke suite)"
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "seed_data_creation": "Guest user TEST_guest_smoke_import auto-created via GET /api/user/{id}; nothing else seeded. Backend seed runs at boot (12 categories + stories).",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "App imported from GitHub works out of the box. Base URL: https://ciao-chat-478.preview.emergentagent.com. Reusable regression file: /app/backend/tests/test_smoke_import_iter_fresh.py. Reader route is /deep-dive/{story_id}. Tabs are under /app/frontend/app/(tabs)/. Guest flow does NOT require any credentials. Stripe is deliberately not configured — /api/purchases returns 503 by design.",
+  "rca_of_issue": "N/A — no issues found."
+}

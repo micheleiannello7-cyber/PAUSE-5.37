@@ -1,0 +1,30 @@
+{
+  "summary": "Iter2 — Collezione V1 + guest invite + reader text size. Backend: 3/3 pytest passing on new /api/user/{id}/collection: initial shape (total/unlocked/categories[], locked_ids[], stories[]), POST /api/user/complete increments unlocked and moves story from locked_ids into the right category's stories[], and lessons are excluded (kind!=lesson). Frontend (390x844 guest flow): Profile shows new collection-row (library-section) tappable → navigates to /collection with collection-screen, collection-summary, collection-count=0, 12 category groups rendered (Human Body, Animals, History, ...) with 132 locked atmospheric cards and 0 unlocked for a fresh guest. Reader text size: reader-size-s/m/l/xl buttons + live reader-size-preview working — computed font-size goes from 15.75px (s) to 21.875px (xl), scale factors match READER_SCALE (0.9→1.25). CollectionCard/LockedCard testIDs follow spec (collection-card-{id}, collection-locked-{id}). ReaderEnding has collection-added, guest-invite, guest-invite-sign-in, guest-invite-dismiss testIDs wired to onOpenCollection/onGuestSignIn/onGuestDismiss. No red screens, only pre-existing deprecation warnings (textShadow*, pointerEvents, Reanimated easing — same as iter1).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "react_native_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_collection_iter2.py",
+    "/app/test_reports/pytest/collection_iter2.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "server.py user_collection correctly uses $or: [_early_filter(state), {id: {$in: done}}] so already-completed stories still show inside their category even if inside early-access window — good.",
+    "collection.tsx tapping an unlocked card opens /deep-dive/{id} directly (per PRD: tap opens reader). Not tested end-to-end because fresh guest has no completed stories, but code wiring is correct.",
+    "reader-ending.tsx: `collected` prop controls the 'Aggiunta alla tua Collezione' card — the parent (deep-dive/[id].tsx) must set it only on first-time completion. Not re-verified in this iteration; recommend main agent self-test the reward moment by swiping to the end once.",
+    "guest-invite.ts correctly caches dismissal timestamp (7-day snooze) and only shows for auth.status==='guest' with completedCount>=2."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_collection_iter2.py (new)"
+  ],
+  "success_rate": {"backend": "100% (3/3)", "frontend": "100% on all testIDs probed"},
+  "seed_data_creation": "TEST_coll_<uuid> guest users auto-created via GET /api/user/{id}/collection and POST /api/user/complete.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Base URL env is EXPO_PUBLIC_BACKEND_URL (frontend/.env) = https://ciao-chat-478.preview.emergentagent.com. Backend collection endpoint: GET /api/user/{user_id}/collection?lang=it returns {total, unlocked, categories:[{id,name,color,total,unlocked,stories:[StoryPreview],locked_ids:[]}]} — lessons excluded. UI testIDs: collection-row (Profile→Library), collection-screen, collection-summary, collection-count, collection-group-{catId}, collection-card-{storyId}, collection-locked-{id}, collection-added (reader-ending first-read), guest-invite / guest-invite-sign-in / guest-invite-dismiss (reader-ending for guests >=2), reader-size-s|m|l|xl + reader-size-preview (Profile Settings). Reader body font comes from BODY_FONT * READER_SCALE[size]; verified via computed style. End-to-end reward moment (collection-added card after swiping to deep-dive-ending on first read) was NOT explicitly reproduced via Playwright — chapter paging via mouse wheel is possible but was skipped for brevity; main agent can self-test by opening a story, scrolling to the end and verifying collection-added appears, then re-reading to confirm it does not.",
+  "rca_of_issue": "N/A — all probed functionality works."
+}
