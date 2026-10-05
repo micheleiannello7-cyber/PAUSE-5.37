@@ -101,3 +101,53 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+## user_problem_statement: "PAUSE — nuove icone 3D ologramma per categorie (colori più saturi) e redesign Home: elemento compatto espandibile 'Argomenti attivi' + card 'Riprendi' più compatta."
+## frontend:
+##   - task: "Home: elemento compatto espandibile 'Argomenti attivi'"
+##     implemented: true
+##     working: "NA"
+##     file: "frontend/src/components/home-active-topics.tsx, frontend/app/(tabs)/discover.tsx"
+##     stuck_count: 0
+##     priority: "high"
+##     needs_retesting: true
+##     status_history:
+##         -working: "NA"
+##         -agent: "main"
+##         -comment: "Nuovo HomeActiveTopics: chiuso mostra 3 mini icone + '+X' + 'Argomenti attivi' + conteggio + chevron. Tocco su testID 'home-active-topics-toggle' espande griglia 3-col (tessere testID 'home-cat-<id>'), chevron ruota, pannello con altezza max e ScrollView interno. Tocco su una tessera attiva/disattiva (focus mazzo); se si spegne l'ultima, toast 'home-min-one-toast'."
+##   - task: "Icone 3D ologramma holo-v1 renderizzate senza immagini rotte"
+##     implemented: true
+##     working: "NA"
+##     file: "frontend/src/components/category-artwork.tsx, frontend/src/api.ts"
+##     stuck_count: 0
+##     priority: "medium"
+##     needs_retesting: true
+##     status_history:
+##         -working: "NA"
+##         -agent: "main"
+##         -comment: "ART_VERSION=holo-v1, delivery=holo-v1c. Verificare rendering icone in Esplora (tab Topics) e nella griglia Home espansa (niente fallback a icona lineare per immagini rotte)."
+##   - task: "Card 'Riprendi da dove eri rimasto' più compatta"
+##     implemented: true
+##     working: "NA"
+##     file: "frontend/src/components/resume-card.tsx"
+##     stuck_count: 0
+##     priority: "low"
+##     needs_retesting: true
+##     status_history:
+##         -working: "NA"
+##         -agent: "main"
+##         -comment: "Ridotte dimensioni (thumb 54, play 34) mantenendo tutti gli elementi. Compare solo se esiste progresso di lettura <0.95 (testID 'resume-reading-card')."
+## metadata:
+##   created_by: "main_agent"
+##   version: "1.1"
+##   test_sequence: 1
+##   run_ui: true
+## test_plan:
+##   current_focus:
+##     - "Home: elemento compatto espandibile 'Argomenti attivi'"
+##     - "Icone 3D ologramma holo-v1 renderizzate senza immagini rotte"
+##   stuck_tasks: []
+##   test_all: false
+##   test_priority: "high_first"
+## agent_communication:
+##     -agent: "main"
+##     -comment: "Testare SOLO frontend. App in italiano. La Home è /(tabs)/discover (tab Home). Potrebbe comparire prima l'onboarding: se richiesto, completarlo selezionando alcune categorie per arrivare alla Home. Focus: (1) elemento 'Argomenti attivi' compatto che espande/richiude una griglia di categorie in-place con chevron; (2) icone categoria 3D che caricano senza rotture in Esplora e nella griglia Home."

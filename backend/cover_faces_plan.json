@@ -1,0 +1,530 @@
+{
+ "arte-color-psychology": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic close-up of a painter’s palette covered with thick daubs of vivid oil paint in red, blue, yellow, green, violet, and orange, with visible brush textures and subtle mixing at the edges. The palette rests alone on a dark studio table beside a few paint smears, with no person present, lit by soft directional light that makes each color glow differently against the moody background. Premium editorial style, rich contrast, intimate detail, vertical 3:4 composition.",
+  "reason": "Un soggetto senza persone è più diretto e specifico: una tavolozza di colori comunica subito emozione, percezione e design meglio della pittrice.",
+  "status": "pending",
+  "title": "Perché i colori ci fanno provare emozioni?"
+ },
+ "arte-design-everyday": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic editorial cover showing a single confusing door in a minimalist corridor: a flat wooden door with a large vertical pull handle mounted on the side that suggests pulling, yet the door clearly opens inward with a push plate and awkward hardware that create contradictory cues. Natural side light from the corridor reveals the brushed metal, varnished wood grain, and subtle wear around the handle and plate, emphasizing the design mismatch. Clean composition, premium dark editorial mood, vertical 3:4, no people, no text.",
+  "reason": "Un oggetto concreto e universalmente legato al tema dell’usabilità funziona meglio della scena con persona: una porta ambigua comunica subito il problema del design che non suggerisce l’azione corretta.",
+  "status": "pending",
+  "title": "Perché alcuni oggetti sono facili da usare e altri no?"
+ },
+ "arte-mona-lisa": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical 3:4 editorial cover of the Mona Lisa painting behind protective glass in the Louvre, shown as the single clear subject. The small Renaissance portrait in its ornate dark frame hangs on a deep museum wall, with subtle reflections on the bulletproof glass and dramatic spotlighting that emphasizes its enigmatic smile and the sense of distance around it. Luxurious, moody museum atmosphere, precise texture of aged varnish, wood frame, and glass, no people, no text.",
+  "reason": "Il soggetto più forte e immediato è il dipinto stesso: è specifico, riconoscibile e racconta la storia senza bisogno della folla.",
+  "status": "pending",
+  "title": "Perché la Gioconda è il quadro più famoso al mondo?"
+ },
+ "arte-music-emotion": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A close-up of a vinyl record spinning on a turntable, with fine grains of water on its glossy black surface visibly vibrating into tiny ripples from the sound. The stylus is lowered into the groove, the metal tonearm and textured record details rendered with crisp realism. Dark studio setting, dramatic soft side lighting, deep shadows, premium editorial mood, photorealistic vertical 3:4 composition.",
+  "reason": "Un soggetto senza persone può rendere bene l’idea centrale: la musica come vibrazione che provoca brividi ed emozione, restando concreto e immediato.",
+  "status": "pending",
+  "title": "Perché la musica ci commuove così tanto?"
+ },
+ "arte-perspective": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic Renaissance perspective study board on a wooden table, showing a precise architectural drawing of a long colonnaded corridor in black ink and chalk on aged parchment, with all orthogonal lines converging to a single clear vanishing point. Include a brass compass, a wooden ruler, and faint construction lines to make the geometric method instantly recognizable as linear perspective. Warm directional studio light from one side, deep shadows, dark editorial background, highly tactile paper fibers, ink, and wood grain, vertical 3:4 composition.",
+  "reason": "Si può mostrare in modo diretto e specifico il principio della prospettiva con una tavola geometrica rinascimentale, senza persone e senza perdere chiarezza editoriale.",
+  "status": "pending",
+  "title": "La prospettiva: come si dipinge la profondità sul piatto?"
+ },
+ "arte-street-art": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical 3:4 editorial cover showing a large detached concrete wall panel covered in vivid layered graffiti spray paint, positioned alone in a sleek contemporary auction room. The panel’s rough cracked surface, drips, tags, and oversprayed colors must feel authentic and urban, contrasted with polished dark floors and a single focused spotlight that gives it the aura of a multimillion-dollar artwork. No people, no text, no paddles, no signage; dramatic museum-like lighting, premium dark editorial mood.",
+  "reason": "Il soggetto si presta bene a un’immagine senza persone: un muro di street art battuto all’asta rende subito il passaggio da strada a mercato.",
+  "status": "pending",
+  "title": "Come i graffiti sono diventati arte da milioni?"
+ },
+ "arte-why-modern-art": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A single white porcelain urinal displayed as a museum artwork, mounted against a deep charcoal gallery wall on a minimal pedestal, photographed straight-on in a quiet contemporary exhibition space. The glossy ceramic surface shows subtle reflections, with dramatic focused museum lighting and soft shadows, creating a premium dark editorial mood. No people, no labels, no text, just the object isolated as a provocative art icon.",
+  "reason": "Un soggetto senza persone è possibile ed è persino più diretto: l’orinatoio di Duchamp è un’icona immediatamente riconoscibile del tema arte moderna come idea.",
+  "status": "pending",
+  "title": "Perché l'arte moderna a volte sembra 'roba che potrei fare anch'io'?"
+ },
+ "blood-basics": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "Photorealistic editorial macro of a single transparent laboratory glass slide holding a fresh dark-red drop of human blood, seen close enough to reveal its dense, liquid texture and suspended cellular detail. The slide rests on a matte black clinical surface in a dim laboratory setting, lit by a narrow cool-white beam from above that makes the blood glow deep crimson against the darkness. Minimal composition, one clear subject, premium scientific mood, vertical 3:4.",
+  "reason": "Si può mostrare il soggetto concreto in modo più diretto e forte: una macro del sangue come tessuto vivente comunica subito ossigeno, difesa e vita senza persone.",
+  "status": "pending",
+  "title": "Cosa c'è davvero nel tuo sangue?"
+ },
+ "cor-why-dreams": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic extreme close-up of a single closed human eye, showing the eyelid, eyelashes, and surrounding skin only, with subtle tension suggesting REM sleep. The subject fills the frame against deep shadow, with soft cool night lighting and faint bluish highlights that create a mysterious, dreamlike atmosphere. Editorial, minimal, intimate, premium dark cover style, vertical 3:4.",
+  "reason": "Il tema si presta bene a un soggetto preciso e immediato senza persone: il sonno REM è rappresentabile in modo forte e pertinente attraverso un occhio chiuso in dettaglio, senza volto né figura umana.",
+  "status": "pending",
+  "title": "Perché sogniamo?"
+ },
+ "cor-why-hiccup": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic medical anatomical model of the human torso focused on the diaphragm, lungs, trachea, and larynx, shown as a single clear subject on a dark studio background. The diaphragm is visibly tensed in a contracted position beneath the lungs, with realistic translucent materials and precise anatomical textures, lit by dramatic soft side light that reveals depth and structure. Premium editorial style, vertical 3:4, clean composition, no text, no people.",
+  "reason": "Si può mostrare in modo diretto e specifico il meccanismo del singhiozzo senza persone, con un soggetto anatomico immediatamente leggibile.",
+  "status": "pending",
+  "title": "Perché ci viene il singhiozzo (e a cosa serve)?"
+ },
+ "cul-handshake": {
+  "allow_hands": true,
+  "decision": "replace",
+  "prompt": "Photorealistic vertical 3:4 editorial cover showing exactly two human hands clasped in a firm handshake, cropped at the wrists so no faces or bodies are visible. One hand emerges from a dark wool suit sleeve and the other from a simple linen sleeve, emphasizing a timeless social ritual; skin texture, knuckles, and the pressure of the grip should be crisp and realistic. Set against a deep, shadowy neutral background with dramatic low-key lighting from one side, creating a premium dark magazine mood and making the joined hands the only clear subject.",
+  "reason": "La storia è sul gesto della stretta di mano: un close-up di sole mani comunica subito fiducia, pace e disarmo senza mostrare volti.",
+  "status": "pending",
+  "title": "Perché ci stringiamo la mano?"
+ },
+ "cul-why-clink-glasses": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "Two crystal wine glasses touching mid-toast, captured at the exact moment of clink, with deep red wine inside and a few tiny droplets suspended near the rims. The glasses are the only subject, set on a dark elegant background with warm evening bokeh and soft golden side light that makes the glass sparkle and the wine glow ruby. Photorealistic, premium editorial mood, intimate and celebratory, vertical 3:4.",
+  "reason": "Il soggetto può essere reso in modo diretto e specifico senza persone: il tintinnio di due calici racconta subito il brindisi.",
+  "status": "pending",
+  "title": "Perché brindiamo dicendo 'cin cin'?"
+ },
+ "cul-why-music-universal": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A single weathered wooden flute lying on dark woven natural-fiber cloth, surrounded by a few simple percussion objects made of bone, shell, and stone, arranged as an archaeological still life. The materials must feel ancient and tactile, with visible grain, scratches, and handmade imperfections, evoking music as a universal human constant across cultures. Soft directional museum-style light from one side, deep shadows, premium dark editorial mood, photorealistic, vertical 3:4.",
+  "reason": "Un soggetto senza persone può essere altrettanto forte e più universale: uno strumento musicale concreto comunica subito il tema della musica presente in tutte le culture.",
+  "status": "pending",
+  "title": "Perché in ogni cultura del mondo esiste la musica?"
+ },
+ "cur-why-mirrors-reverse": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover showing a small freestanding rectangular mirror on a dark matte tabletop, reflecting a single asymmetrical object placed directly in front of it: a white ceramic mug with its handle clearly on one side. The mirror and mug are the only subjects, shown in a minimalist studio setting with deep charcoal background, soft directional light, crisp reflections, and subtle shadows that make the left-right reversal immediately visible. Premium dark magazine aesthetic, highly realistic materials, clean composition, no people, no text.",
+  "reason": "Si può rappresentare in modo diretto il principio dello specchio con un oggetto simmetrico e il suo riflesso, senza ricorrere a un volto umano.",
+  "status": "pending",
+  "title": "Perché lo specchio inverte destra e sinistra ma non sopra e sotto?"
+ },
+ "cur-why-onions-cry": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic red onion sliced in half on a dark kitchen cutting board, the freshly cut surface wet and detailed with visible concentric layers. Delicate translucent vapors rise from the cut onion into cool directional light, making the invisible chemical release feel tangible, against a deep black editorial background. Minimal composition, premium food-science aesthetic, high contrast, no other objects.",
+  "reason": "Una cipolla tagliata che rilascia vapori irritanti comunica il tema in modo diretto e specifico senza ricorrere a un volto umano.",
+  "status": "pending",
+  "title": "Perché tagliare la cipolla ci fa piangere?"
+ },
+ "cur-why-time-flies": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A single antique glass hourglass with pale sand visibly streaming fast through the narrow neck, placed on a dark wooden table in a dim interior. Around it, a ring of many small Polaroid-style photos lies out of focus and scattered, suggesting memory fragments and routine, while the hourglass remains the only sharp subject. Moody side lighting, deep shadows, premium dark editorial style, photorealistic, vertical 3:4.",
+  "reason": "Si può rendere il tema in modo diretto e specifico con un oggetto editoriale forte: una clessidra che allude alla percezione del tempo che accelera, senza bisogno di un volto.",
+  "status": "pending",
+  "title": "Perché il tempo sembra volare da adulti?"
+ },
+ "eco-compound-interest": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic editorial cover showing exactly one clear subject: a glass jar filled with euro coins, placed on a dark matte desk, with the coins inside arranged in a visible upward spiral from the bottom to the rim to suggest accelerating growth over time. Soft warm side light creates rich metallic highlights on the coins and deep shadows around the jar, with a premium dark financial-magazine mood. Minimal setting, no other objects, no people, vertical 3:4 composition.",
+  "reason": "Si può mostrare il concetto in modo diretto e specifico senza persone: monete che si moltiplicano visivamente nel tempo rendono subito l’interesse composto.",
+  "status": "pending",
+  "title": "L'interesse composto: l'ottava meraviglia?"
+ },
+ "eco-inflation": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover showing a worn vintage leather wallet lying open on a dark wooden table, with old euro banknotes and coins beside it and a few modern grocery items nearby, clearly emphasizing how little the same money buys today. The scene is intimate and realistic, with textured materials, muted premium tones, and soft directional window light creating gentle shadows. No people, no text, no labels, just the wallet, cash, coins, and everyday goods as the single clear subject.",
+  "reason": "Si può mostrare in modo più diretto e specifico la perdita di potere d’acquisto del denaro senza persone, con un soggetto immediatamente leggibile e legato al tema.",
+  "status": "pending",
+  "title": "Cos'è l'inflazione e perché i prezzi salgono?"
+ },
+ "eco-scarcity-choices": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A single minimalist desktop still life: one leather wallet lying open on a dark matte table, with only a few euro coins and one banknote left beside it, and a small analog clock placed next to them. Photorealistic editorial cover, premium subdued palette, soft directional light from above creating crisp shadows and emphasizing the limited money and limited time. Tight vertical 3:4 composition, elegant dark background, no people, no text.",
+  "reason": "Un soggetto senza persone può rendere in modo diretto e specifico la scarsità e il costo opportunità.",
+  "status": "pending",
+  "title": "Perché non possiamo avere tutto: la scienza delle scelte"
+ },
+ "eco-stock-market": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic close-up of an electronic stock exchange display board, filled with glowing red and green candlestick charts and rows of changing numbers, the screen surface slightly reflective and ultra-sharp. The subject is a single financial market monitor in a dark trading-floor setting, with surrounding space falling into soft shadow and no people visible. Dramatic low-key editorial lighting, premium dark palette, crisp contrast, vertical 3:4 composition.",
+  "reason": "Si può sostituire con un soggetto concreto e immediato: un display di mercato con grafico e quotazioni comunica direttamente borsa e oscillazione dei prezzi senza persone.",
+  "status": "pending",
+  "title": "Cos'è la borsa e perché le azioni salgono e scendono?"
+ },
+ "eco-supply-demand": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic editorial still life of exactly two objects on a dark matte stone surface: a clear glass bottle filled with water and a cut diamond placed beside it, both isolated and prominently framed. The bottle should show subtle condensation and realistic refraction, while the diamond throws sharp cold highlights, making the contrast between ordinary necessity and rare luxury instantly legible. Low-key studio lighting, deep shadows, premium dark magazine aesthetic, vertical 3:4 composition.",
+  "reason": "Si può mostrare in modo diretto e memorabile il paradosso acqua-diamante senza persone, restando perfettamente aderenti al tema di domanda, offerta e scarsità.",
+  "status": "pending",
+  "title": "Domanda e offerta: la legge invisibile dei prezzi"
+ },
+ "eco-why-taxes": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial still life of a neatly arranged miniature public infrastructure diorama on a dark matte surface: a section of asphalt road with lane markings, a small public hospital building with an ambulance bay, a school building, a courthouse with stone columns, and a police car, all connected by subtle stacks of euro coins at the base. Materials should feel real and tactile—painted metal, concrete, asphalt, glass, and minted metal—shot in a premium studio setting with dramatic soft side light and deep shadows. Clean composition, dark luxurious background, no text, no people.",
+  "reason": "Si può rendere il tema in modo più diretto e specifico mostrando i servizi pubblici finanziati dalle tasse senza persone.",
+  "status": "pending",
+  "title": "Perché paghiamo le tasse (e dove finiscono)?"
+ },
+ "eco-why-things-cost": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical 3:4 editorial cover of a split-flap airport departure board as the single clear subject, seen in close-up inside a modern terminal lounge. Several flights are listed with adjacent digital fare displays showing different prices for the same route at different times, emphasizing dynamic pricing; matte black panels, amber digits, brushed metal frame, soft reflections from airport lighting. Dark premium editorial mood, crisp focus, cinematic contrast, no people, no text overlays beyond the board elements.",
+  "reason": "Si può rappresentare il pricing dinamico in modo diretto e specifico con un tabellone voli aeroportuale e prezzi che cambiano, senza ricorrere a persone.",
+  "status": "pending",
+  "title": "Perché lo stesso prodotto costa prezzi diversi?"
+ },
+ "empathy-basics": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical 3:4 editorial cover showing a single anatomical model of the human brain, with a network of mirror-like metallic synapses concentrated between two highlighted cortical regions, suggesting empathy and mirroring. The brain model is matte ivory resin with fine anatomical detail, placed alone on a dark charcoal studio surface against a deep black background, lit by a focused cool spotlight with subtle reflections on the metallic neural connections. Premium dark editorial mood, crisp texture, high contrast, no text, no people.",
+  "reason": "L’empatia si può rendere in modo immediato e specifico con un dettaglio neuroscientifico concreto, senza ricorrere a un volto umano.",
+  "status": "pending",
+  "title": "Cos'è l'empatia (e perché non ce l'hanno tutti)?"
+ },
+ "exoplanets-basics": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic view of a compact planetary system in deep space, centered on one Earth-sized exoplanet with blue oceans, white cloud bands, and a thin glowing atmosphere, orbiting within the habitable zone of a small orange star. Around it, two or three other clearly distinct planets are visible at different distances, emphasizing discovery and comparison beyond Earth; the scene is scientifically grounded, not fantastical, with black space, sparse sharp stars, and subtle dust haze. Crisp sidelight from the star creates realistic planetary curvature, rim light, and soft shadow, for a premium dark editorial cover.",
+  "reason": "Un astronauta è generico: il tema sono gli esopianeti simili alla Terra, che si possono rappresentare in modo diretto e più specifico senza persone.",
+  "status": "pending",
+  "title": "Ci sono altri pianeti come la Terra?"
+ },
+ "fear-basics": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic close-up of a transparent anatomical human brain model on a dark matte surface, with the amygdala region glowing deep amber inside the temporal lobe. The material should look like clear resin with subtle internal detail, lit by a single dramatic side light against a black editorial background. Premium dark magazine cover style, sharp focus, minimal composition, no text, no people.",
+  "reason": "Si può rendere la paura in modo più specifico e immediato mostrando il suo meccanismo biologico: l’amigdala come sistema d’allarme del cervello.",
+  "status": "pending",
+  "title": "Cos'è davvero la paura?"
+ },
+ "french-revolution": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover of the Bastille fortress in Paris on 14 July 1789, seen close and imposing from street level, with its massive gray stone towers, iron-barred windows, and heavy wooden gate under siege damage. Smoke drifts across the scene, scattered cobblestones and a broken cannon wheel lie in the foreground, and warm firelight mixes with the cool haze of a stormy summer afternoon. No people, no text, cinematic historical realism, dark premium magazine style.",
+  "reason": "La Bastiglia è un soggetto storico immediato, specifico e più forte di una figura generica di povertà.",
+  "status": "pending",
+  "title": "Perché scoppiò la Rivoluzione Francese?"
+ },
+ "geo-borders": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vintage political map spread flat on a dark wooden table, shown in a close vertical crop, with one striking border region as the single clear subject: a jagged frontier mixing ruler-straight desert lines, a river-curved section, and a small enclave surrounded by another country. The paper is aged, slightly creased, with fine colored boundary lines and subtle topographic shading, but no readable labels. Soft directional light from one side creates a moody editorial atmosphere, emphasizing the strange geometry of the borders and the texture of the old map.",
+  "reason": "Un’immagine senza persone può essere più diretta e specifica: una mappa politica con confini irregolari comunica subito il tema di forme, trattati e geografia.",
+  "status": "pending",
+  "title": "Perché i confini degli Stati hanno forme così strane?"
+ },
+ "geo-highest-mountain": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover of Mount Everest’s summit pyramid seen from high altitude, its dark rock and wind-scoured snow sharply defined against a deep blue Himalayan sky. The mountain fills the frame as the single unmistakable subject, with layered ridgelines fading below to suggest its height above sea level. Cold early-morning light, crisp atmosphere, dramatic but natural detail, no people, no tents, no text.",
+  "reason": "Si può sostituire con un soggetto più diretto e specifico: l’Everest stesso, evitando la figura umana senza perdere chiarezza editoriale.",
+  "status": "pending",
+  "title": "L'Everest è davvero la montagna più alta?"
+ },
+ "geo-map-lies": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover showing a vintage classroom globe placed beside a flat world map pinned on a dark wall, both clearly displaying Greenland and Africa so their conflicting sizes are instantly visible. The globe has matte paper texture and a brass axis; the flat map is slightly curled at the edges, printed on off-white paper, in a quiet study setting with a wooden surface below. Soft directional light from the side creates a thoughtful, premium contrast, emphasizing the impossible translation from sphere to plane.",
+  "reason": "Si può mostrare direttamente il tema della distorsione cartografica con un soggetto preciso e immediato, senza persone.",
+  "status": "pending",
+  "title": "Perché tutte le mappe del mondo 'mentono'?"
+ },
+ "geo-plate-tectonics": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic close-up of a physical relief globe focused on the Atlantic Ocean, with the coastlines of South America and Africa clearly visible and recognisably matching like puzzle pieces. Show the globe’s textured paper surface, subtle topographic shading, and a faint raised ridge line through the middle of the ocean suggesting the mid-Atlantic ridge, in a dark study setting with a single warm directional light and deep shadows. Vertical editorial composition, crisp scientific realism, no people, no text.",
+  "reason": "Il tema si presta perfettamente a un soggetto concreto e specifico senza persone: una mappa fisica/globo con i continenti che combaciano e la dorsale oceanica rende subito l’idea della tettonica a placche.",
+  "status": "pending",
+  "title": "I continenti si muovono davvero?"
+ },
+ "how-many-galaxies": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A single grand spiral galaxy seen from space, filling most of the frame, with clearly defined glowing arms, dense golden core, blue star clusters, and dark dust lanes. Surround it with a deep black cosmic background scattered with many smaller distant galaxies and fine stars, suggesting vast scale without clutter. Photorealistic astronomical imagery, high contrast, crisp detail, cold deep-space light, premium dark editorial mood, vertical 3:4 composition.",
+  "reason": "Una galassia a spirale vista nello spazio è più diretta, specifica e forte della figura umana per raccontare il tema del numero immenso di galassie.",
+  "status": "pending",
+  "title": "Quante galassie ci sono nell'universo?"
+ },
+ "lez-eco": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical 3:4 editorial cover of a lone rocky mountain cliff facing a broad alpine valley, with a visible sound wave ripple emanating from the cliff and reflecting back from a distant sheer rock wall. The subject is the landscape geometry that makes an echo possible: rough gray stone, sparse alpine grass, layered mountains, and crisp evening air under warm sunset light. Naturalistic, cinematic, scientifically plausible, no people, no text.",
+  "reason": "Si può mostrare il fenomeno in modo diretto e più specifico della persona in montagna.",
+  "status": "pending",
+  "title": "Perché senti l'eco (e a volte no)"
+ },
+ "lez-orientarsi-stelle": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic night sky over a dark mountain ridge, with the Big Dipper clearly visible and Polaris shining distinctly above the horizon in the exact direction of north. The subject is the star pattern itself: crisp stars in a deep indigo sky, faint Milky Way texture, cold alpine air, no people, no buildings, no text. Editorial cover composition, vertical 3:4, minimal foreground silhouette, high contrast natural starlight.",
+  "reason": "Si può mostrare direttamente il soggetto concreto della storia: il Grande Carro e la Stella Polare, senza ricorrere a una persona.",
+  "status": "pending",
+  "title": "Come orientarsi con le stelle in 4 mosse"
+ },
+ "printing-press": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical 3:4 editorial cover showing a single 15th-century wooden Gutenberg-style printing press as the sole subject, with its screw mechanism, platen, inked metal type bed, and a freshly pressed sheet visible. The press is made of dark aged oak, iron fittings, and lead type, set in a dim Renaissance workshop with rough stone walls and scattered paper softly out of focus. Dramatic side lighting from a small window reveals the texture of the wood, metal, and ink, creating a serious dark premium editorial mood.",
+  "reason": "La pressa tipografica a caratteri mobili è un soggetto concreto, storico e immediatamente leggibile senza persone, perfettamente coerente col titolo.",
+  "status": "pending",
+  "title": "Perché la stampa a caratteri mobili ha cambiato tutto?"
+ },
+ "psi-why-procrastinate": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover of a cluttered desk at night, centered on an open laptop showing a blank white document beside a glowing smartphone with colorful notification icons, both sharply recognisable as competing focal points. Include scattered study notes, a closed planner, and a ticking analog desk clock, all lit by a single cool desk lamp in an otherwise dark room, creating strong contrast and a tense, avoidant atmosphere. No people, no text, premium dark magazine aesthetic.",
+  "reason": "Un'immagine senza persone può rendere il conflitto tra compito importante e sollievo immediato in modo diretto e specifico.",
+  "status": "pending",
+  "title": "Perché rimandiamo le cose importanti?"
+ },
+ "v4-caffe-espresso": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover of a late 19th-century Italian espresso machine, an ornate polished brass and copper Moriondo-style apparatus with gauges, pipes, and boiler, standing alone on a dark marble bar counter. The setting is an old Milanese or Turin café interior, softly out of focus, with warm low light catching the metal surfaces and faint steam rising from the machine. Rich shadows, premium dark palette, no people, no text.",
+  "reason": "Un soggetto senza persone è più specifico e coerente: la macchina per espresso storica racconta l’invenzione italiana meglio di una generica tazza al bar.",
+  "status": "pending",
+  "title": "Come l'Italia ha inventato l'espresso (e perché non è stata la prima con il caffè)"
+ },
+ "v4-carta-sette-volte": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A single long white sheet of paper folded repeatedly into a thick, compact zigzag stack, shown in extreme close-up on a dark matte desk, with the folded layers clearly visible and growing denser toward the center. The paper should look real, slightly fibrous and crisp, lit by a focused soft side light that carves sharp highlights and deep shadows between the layers. Minimal composition, premium editorial style, photorealistic, vertical 3:4, dark background, no people, no text.",
+  "reason": "Un soggetto senza persone è più forte e immediato: un foglio piegato a fisarmonica mostra visivamente il limite delle pieghe e resta perfettamente specifico alla storia.",
+  "status": "pending",
+  "title": "Perché non puoi piegare un foglio più di sette volte (e chi ci è riuscito)"
+ },
+ "v4-effetto-spettatore": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover of a red emergency call button mounted on a brushed stainless-steel pillar in a busy metro station, the button protected by a clear scratched plastic flap and glowing faintly. The station around it is empty of visible people, with polished stone floor, blurred rows of turnstiles and cool overhead fluorescent light creating a tense, clinical atmosphere. Crisp focus on the button and metal textures, dark premium palette, cinematic realism.",
+  "reason": "Si può rendere il tema in modo diretto e specifico senza persone: un allarme d’emergenza ignorato in uno spazio pubblico comunica subito emergenza + mancato intervento.",
+  "status": "pending",
+  "title": "Perché in mezzo alla folla nessuno interviene"
+ },
+ "v4-lez-ascolto-attivo": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover showing a pair of matte black over-ear headphones resting beside a small ceramic café cup on a dark wooden table, with a pocket notebook opened to a blank page and a graphite pencil laid across it. The scene is intimate and minimal, evoking careful listening and thoughtful reflection rather than conversation itself; materials should feel tactile and premium: soft rubber, brushed metal, glazed ceramic, textured paper, worn wood. Shot in moody natural window light with deep shadows, shallow depth of field, and a refined dark palette suitable for a premium psychology feature.",
+  "reason": "Il tema si presta bene a un oggetto-editoriale molto specifico e immediato: l’ascolto attivo come dialogo chiarito e riflesso, senza bisogno di volti.",
+  "status": "pending",
+  "title": "Ascolto attivo: farsi capire ascoltando meglio"
+ },
+ "v4-lez-coincidenze": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover showing a tabletop arrangement of exactly 23 small birthday cupcakes on a dark matte surface, each topped with a single lit candle, with two cupcakes clearly sharing the same distinctive icing color and decoration while the others are all different. The cupcakes are realistic sponge cake with textured frosting, wax candles, and tiny flame reflections, shot from a slightly elevated angle in a dim, moody studio setting. Dramatic low-key lighting isolates the group against a deep charcoal background, creating a premium dark editorial feel.",
+  "reason": "Una cover senza persone può essere più chiara e specifica: il paradosso del compleanno rende subito visibile il tema delle coincidenze improbabili ma comuni.",
+  "status": "pending",
+  "title": "Perché le coincidenze non sono così incredibili"
+ },
+ "v4-lez-fonti-primarie": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic editorial still life of exactly three historical sources arranged side by side on a dark blue wool cloth: a handwritten old letter on yellowed paper with a wax seal, a closed school history textbook with worn cloth binding, and a vintage documentary film reel in a metal canister. The materials must be unmistakable and tactile—fibrous paper, cracked wax, textured fabric cover, brushed metal—and each object clearly separated so the contrast between source types is instantly readable. Soft directional museum light from the upper left, deep shadows, premium dark academic mood, vertical 3:4 composition, no text anywhere.",
+  "reason": "Si può rendere il tema in modo più preciso e senza persone mostrando fonti storiche concrete a confronto, già coerenti con il contenuto dell’articolo.",
+  "status": "pending",
+  "title": "Fonte primaria o secondaria? Come capire di chi ti stai fidando"
+ },
+ "v4-lez-gestire-ansia": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A close-up of a dark bathroom mirror with a soft oval of fogged condensation at its center, and a clean clearing line gradually opening through the mist as if from a long exhale. The mirror surface is cool glass with tiny water droplets, set against matte charcoal tiles in a dim, modern interior. Low, moody side light creates a calm editorial atmosphere, photorealistic, vertical 3:4.",
+  "reason": "Si può rendere l’idea dell’ansia che cala con un soggetto concreto e immediato, senza persona: il respiro visualizzato su uno specchio appannato che si schiarisce.",
+  "status": "pending",
+  "title": "Gestire un momento di ansia: 4 tecniche che funzionano in 5 minuti"
+ },
+ "v4-lez-primo-soccorso": {
+  "allow_hands": true,
+  "decision": "replace",
+  "prompt": "A photorealistic CPR training mannequin torso lying on a dark matte floor, centered in frame, with a pair of adult hands placed correctly at the middle of the chest performing compressions. The mannequin is pale plastic with realistic anatomical contours, no face visible, and the setting is a minimal emergency-training room with deep shadowy background. Dramatic directional light from above carves the hands and sternum area, creating a premium dark editorial mood, vertical 3:4 composition.",
+  "reason": "Una cover senza persone può essere molto più chiara e specifica: un torso da addestramento per RCP comunica subito il primo soccorso senza volti né ambiguità.",
+  "status": "pending",
+  "title": "Le 4 mosse di primo soccorso che tutti dovrebbero sapere"
+ },
+ "v4-lez-riconoscere-pianeti": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical 3:4 editorial night-sky scene showing exactly one clear subject: the western sky just after dusk with the ecliptic visible as a diagonal band of faint zodiacal light, and four naked-eye planets clearly distinguishable along it. Venus is the brightest low near the horizon, Mars slightly higher with a subtle reddish tint, Jupiter bright white, and Saturn dimmer with a pale yellow tone, all set above a dark rural landscape reduced to a minimal silhouette at the very bottom edge. Crisp atmospheric realism, deep blue-to-black twilight gradient, sharp stars with the planets appearing steady and non-twinkling, premium dark magazine aesthetic.",
+  "reason": "Si può mostrare direttamente il cielo con i pianeti visibili a occhio nudo in modo più specifico e immediato del gesto umano.",
+  "status": "pending",
+  "title": "Come riconoscere un pianeta a occhio nudo"
+ },
+ "v4-lez-stimare": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic top-down close-up of a dark desk with a small pile of ordinary objects arranged for a Fermi estimate: a notebook page covered with simple circles, arrows, and rough quantity breakdowns, a pencil, a pocket calculator, a ruler, and a few natural reference items like an acorn and a stone for scale. The scene should feel like rapid back-of-the-envelope reasoning, with visible graphite marks, worn paper texture, matte plastic calculator keys, and soft warm desk-lamp light against deep shadows. Clean composition, premium editorial style, no text legible anywhere, vertical 3:4.",
+  "reason": "Si può rendere il metodo di Fermi in modo diretto e specifico con oggetti di stima e calcolo, senza persone, mantenendo coerenza editoriale forte.",
+  "status": "pending",
+  "title": "Stimare al volo: quanti, quanto, quanto grande"
+ },
+ "v4-paradosso-scelta": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic editorial cover showing a supermarket tasting display with exactly twenty-four small glass jars of jam arranged in neat rows on a dark wooden table, each jar open with a tiny tasting spoon beside it. The setting is an upscale grocery aisle, softly out of focus in the background, with one warm spotlight illuminating the crowded display and making the jewel-like reds, oranges, and purples of the jam glow against a moody dark atmosphere. Vertical 3:4 composition, clean and graphic, no people, no text.",
+  "reason": "Un soggetto concreto e immediato esiste: il banco di degustazione con troppi vasetti di marmellata richiama direttamente l’esempio centrale del pezzo ed è più specifico del corridoio con porte.",
+  "status": "pending",
+  "title": "Troppe opzioni ti rendono meno felice"
+ },
+ "v4-pelle-oca": {
+  "allow_hands": false,
+  "decision": "keep",
+  "prompt": "",
+  "reason": "Il soggetto è proprio il fenomeno corporeo sulla pelle: il close-up senza volto è già la rappresentazione più diretta, specifica e forte.",
+  "status": "pending",
+  "title": "Perché ci viene la pelle d'oca (e a cosa serviva)"
+ },
+ "v4-sbadiglio": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic anatomical model of a human brain resting on a dark matte laboratory table, with a thin veil of cool condensation and subtle blue-tinted vapor rising from its surface, suggesting thermoregulation. Clean scientific setting, no other objects, dramatic soft side lighting against a deep shadowy background, premium editorial mood. Vertical 3:4 composition, sharply detailed textures of the brain model and moisture, realistic and elegant.",
+  "reason": "Si può rendere il tema in modo immediato e specifico con un soggetto scientifico legato al cervello e allo sbadiglio, senza ricorrere a un volto umano.",
+  "status": "pending",
+  "title": "Perché sbadigliamo (e perché è contagioso)"
+ },
+ "v5-applausi": {
+  "allow_hands": true,
+  "decision": "keep",
+  "prompt": "",
+  "reason": "Il tema è proprio il gesto dell’applaudire: le mani che battono sono il soggetto più diretto e immediato, senza bisogno del titolo.",
+  "status": "pending",
+  "title": "Perché battiamo le mani per dire che qualcosa ci è piaciuto?"
+ },
+ "v5-astronauti-alti": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic close-up of a transparent anatomical model of a human spine suspended weightlessly inside a spacecraft research module, the intervertebral discs visibly slightly expanded and softly glowing to emphasize decompression. The model is made of clear resin and bone-toned material, with metallic lab fixtures and blurred ISS-style interior panels in the background, and a small round porthole showing the blue curve of Earth far beyond. Cool white cabin light with subtle rim light, ultra-detailed, dark premium editorial mood, vertical 3:4.",
+  "reason": "Si può mostrare in modo diretto e specifico il vero soggetto della storia: la colonna vertebrale che si decomprime in microgravità, senza bisogno di un volto umano.",
+  "status": "pending",
+  "title": "Nello spazio gli astronauti diventano più alti"
+ },
+ "v5-banane-radioattive": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A single ripe yellow banana on a matte black laboratory surface, beside a vintage Geiger counter with its needle visibly lifted, the banana as the clear main subject. Photorealistic editorial still life, dark background, dramatic low-key lighting with a faint green radioactive glow reflecting on the peel, ultra-crisp texture and realistic materials. Clean vertical 3:4 composition, premium science-magazine cover style, no people, no text.",
+  "reason": "Una banana da sola comunica subito il tema specifico; la radioattività si può rendere con luce/scena senza mostrare persone.",
+  "status": "pending",
+  "title": "Le banane sono radioattive (e tu anche)"
+ },
+ "v5-brividi-musica": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A pair of premium over-ear headphones resting on a dark matte surface beside an extreme close-up patch of human forearm skin covered in vivid goosebumps, both sharply in focus as the single editorial subject. The materials should feel tactile and real: soft black leather ear cushions, brushed metal frame, natural skin texture with tiny raised follicles. Low-key studio lighting with a cool rim light and deep shadows, premium dark magazine-cover aesthetic, photorealistic, vertical 3:4, no text.",
+  "reason": "Si può rendere il tema in modo diretto e specifico senza persone: cuffie e pelle d’oca visualizzano subito i brividi musicali.",
+  "status": "pending",
+  "title": "Perché la musica ti fa venire i brividi?"
+ },
+ "v5-capelli-bianchi": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A single human hair follicle in extreme macro cross-section, photorealistic and scientifically accurate, embedded in warm-toned scalp skin tissue; the hair shaft emerging from the follicle is sharply divided from dark pigmented brown at the base to translucent white along the new growth, with tiny melanin granules visible only in the darker section. Editorial laboratory-style composition, one isolated specimen as the only subject, against a deep charcoal background with subtle depth and no other objects. Soft directional side light, high detail, premium dark magazine aesthetic, vertical 3:4.",
+  "reason": "Un capello/follicolo in dettaglio racconta il tema in modo più specifico del volto e rende immediato il legame con pigmento e ingrigimento.",
+  "status": "pending",
+  "title": "Perché i capelli diventano bianchi?"
+ },
+ "v5-citta-piu-fredda": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover of a single parked car in Yakutsk, Siberia, idling in extreme cold at night. The car is heavily crusted with frost and ice, exhaust vapor billows thickly into blue-black air, and the tires rest on a snow-packed street lined with low wooden buildings softened by drifting frost. Dim amber streetlights and a few cold window glows reflect on the frozen metal, emphasizing the brutal -50°C atmosphere.",
+  "reason": "Si può mostrare in modo più specifico e immediato Jakutsk attraverso il suo elemento distintivo: le auto lasciate accese nel gelo estremo, senza ricorrere a una figura umana.",
+  "status": "pending",
+  "title": "La città dove a -50 gradi la scuola resta aperta"
+ },
+ "v5-corpo-senza-tuta": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic close-up of a human anatomical training mannequin torso suspended inside a spacecraft vacuum test chamber, the chest and arms visibly swollen under taut synthetic skin, with small beads of moisture evaporating from the surface. Industrial metal walls, circular hatch details, and frostless cold gray lighting emphasize the sterile vacuum environment; one detached space helmet lies out of focus on the chamber floor. Vertical 3:4, dark editorial mood, hyperreal textures, no face visible, no text.",
+  "reason": "Si può rendere il tema in modo più preciso e forte mostrando il corpo esposto al vuoto senza volto, evitando l’astronauta generico.",
+  "status": "pending",
+  "title": "Cosa succede davvero a un corpo nello spazio senza tuta"
+ },
+ "v5-foto-notturne": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A modern smartphone mounted on a small tripod, photographed from behind in a dark city street at night, with its camera module sharply visible and the screen showing a bright, detailed low-light scene of wet pavement, streetlights, and distant buildings. The phone is the single clear subject, made of glass and metal with realistic reflections, surrounded by deep shadows and cool urban night light. Photorealistic editorial cover, vertical 3:4, high contrast, subtle atmospheric glow, no people, no text.",
+  "reason": "Si può mostrare direttamente il soggetto tecnologico: uno smartphone che fotografa una scena notturna, rendendo immediato il tema della modalità notte senza persone.",
+  "status": "pending",
+  "title": "Come fa il telefono a scattare foto luminose di notte?"
+ },
+ "v5-giramento-testa": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic medical anatomical model of the human inner ear, with the three semicircular canals clearly visible and filled with translucent fluid, shown in close-up against a deep dark neutral background. The subject is made of lifelike translucent tissue and bone textures, with subtle highlights catching the curved canals to emphasize motion and balance. Soft, dramatic studio lighting from one side, premium editorial look, sharp focus on the labyrinth structure, vertical 3:4 composition.",
+  "reason": "Si può mostrare in modo diretto e specifico l’orecchio interno e i canali semicircolari, che sono il vero soggetto della storia, senza ricorrere a una persona.",
+  "status": "pending",
+  "title": "Perché gira la testa dopo aver girato su te stesso?"
+ },
+ "v5-lez-app-server": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover showing a smartphone lying on a dark desk with a single glowing tap button on screen, connected by a thin luminous data line to a nearby rack server with visible ports and blinking status LEDs, and beyond it a separate storage unit with stacked hard drives, all in one continuous composition. Premium dark technology aesthetic, black metal, glass, cables and cool blue light, with shallow depth of field and crisp reflections. The scene should clearly convey a request traveling from app to server to database and back, with no people and no text.",
+  "reason": "Si può mostrare in modo diretto e specifico il percorso tecnico della richiesta senza persone, con un soggetto coerente come smartphone, server e database visibili insieme.",
+  "status": "pending",
+  "title": "Cosa succede quando tocchi un'app: il viaggio di una richiesta"
+ },
+ "v5-lez-fondo-emergenza": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic broken front-loading washing machine in a dim self-service laundry, its door slightly ajar with a small puddle of water spreading across the worn tile floor. The machine is scratched white metal with a dark inactive display and a single red warning light, surrounded by a few scattered coins and an overturned detergent bottle. Moody low-key editorial lighting, deep shadows, sharp detail, vertical 3:4 composition.",
+  "reason": "Il soggetto può essere reso in modo più specifico e forte senza persone: una lavatrice guasta comunica l’emergenza domestica concreta citata nel pezzo e resta immediatamente leggibile.",
+  "status": "pending",
+  "title": "Il fondo di emergenza: costruirlo in 4 passi anche con poco"
+ },
+ "v5-lez-gesti-italiani": {
+  "allow_hands": true,
+  "decision": "keep",
+  "prompt": "",
+  "reason": "La storia è intrinsecamente sui gesti della mano: un dettaglio umano senza volto è il soggetto più immediato e specifico, mentre un’alternativa senza persone risulterebbe più astratta o meno chiara.",
+  "status": "pending",
+  "title": "I gesti italiani: 4 gesti, cosa significano e da dove vengono"
+ },
+ "v5-lez-grafici-ingannevoli": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic editorial close-up of a printed bar chart on matte white paper, lying on a dark desk under a single focused lamp. The chart itself is the only subject: one version has a vertically truncated y-axis that makes tiny differences look dramatic, with crisp black bars and thin colored comparison lines, plus a second inset chart beside it showing the same data on a full zero-based scale; no text or numbers, only clear axis lines and shapes. Premium dark magazine style, high contrast, precise paper texture, subtle shadows, vertical 3:4 composition.",
+  "reason": "Si può mostrare il tema in modo più diretto e specifico con un grafico ingannevole come oggetto editoriale, senza persone.",
+  "status": "pending",
+  "title": "Come un grafico può mentire dicendo la verità: 4 trucchi da riconoscere"
+ },
+ "v5-lez-guardare-quadro": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical 3:4 editorial cover of a single framed oil painting hanging on a dark museum wall, seen straight on at close range, with no visitors present. The painting should be a recognisable figurative landscape full of visible brushstrokes, with a small empty caption plaque beside it, but no readable text; the composition must emphasize the artwork itself, the path of the eye through the scene, and the play of light and color on the canvas surface. Soft directional gallery lighting creates gentle reflections on the varnish and frame, against a quiet, premium museum interior.",
+  "reason": "Si può mostrare direttamente l’atto di osservare un quadro senza persone: un dipinto reale in museo, isolato e leggibile come soggetto editoriale.",
+  "status": "pending",
+  "title": "Come guardare un quadro: 4 passi per non passare oltre in 8 secondi"
+ },
+ "v5-lez-hotel-hilbert": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic grand hotel corridor seen in one-point perspective, with identical dark wooden doors on both sides receding seemingly without end, each door marked by a small brass room number plaque. Warm wall sconces create a repeating rhythm of light and shadow along a deep burgundy carpet, emphasizing the endless extension of the hallway. Elegant, old-world materials—polished wood, brass, velvet, and marble baseboards—make it feel like a real luxury hotel, while the vanishing point suggests infinity.",
+  "reason": "Il soggetto può essere reso in modo più specifico e immediato con l’albergo infinito stesso, senza persone: il corridoio di porte numerate comunica subito il paradosso di Hilbert.",
+  "status": "pending",
+  "title": "L'albergo con infinite stanze: capire l'infinito con Hilbert"
+ },
+ "v5-lez-jet-lag": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic vertical editorial cover showing a single airline tray table by an airplane window at dawn, with a wristwatch, a boarding pass, and a small breakfast tray arranged neatly, all lit by cool blue cabin light and warm sunrise light from outside. The watch shows a time that feels wrong for breakfast, making the time-zone mismatch instantly clear. Modern commercial aircraft interior, crisp materials, quiet premium travel atmosphere, no people, no text.",
+  "reason": "Si può rendere il jet lag in modo diretto e specifico senza persone, con un oggetto di viaggio immediatamente leggibile.",
+  "status": "pending",
+  "title": "Battere il jet lag: 4 passi prima, durante e dopo il volo"
+ },
+ "v5-lez-storia-arte-tappe": {
+  "allow_hands": false,
+  "decision": "replace",
+  "prompt": "A photorealistic museum storage rack holding exactly four vertical canvases side by side, each unmistakably painted in a different historic style: a Renaissance panel with geometric perspective and architectural depth, a dramatic Baroque canvas with dark shadows and a shaft of golden light, an Impressionist painting with broken outdoor brushstrokes and shimmering color, and an early abstract modernist canvas with fragmented forms and bold planes. The subject is the four paintings themselves, with visible linen texture, aged varnish, wooden stretchers, and traces of paint thickness, seen in a dark refined gallery-storage setting. Soft directional spotlighting isolates the four works against a deep charcoal background, premium editorial mood, vertical 3:4.",
+  "reason": "Si può rendere il tema in modo più specifico e forte senza persone: una sequenza concreta di quattro dipinti/canvas mostra subito l’evoluzione della pittura occidentale.",
+  "status": "pending",
+  "title": "Cinquecento anni di pittura in 4 tappe"
+ }
+}

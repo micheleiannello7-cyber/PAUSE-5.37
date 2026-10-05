@@ -99,8 +99,10 @@ def _load_report() -> dict:
 
 
 def _postprocess(raw_rgb: Image.Image) -> bytes:
-    """resize 480 + vignette dei bordi verso near-black (come reference-3d-v6)."""
-    image = raw_rgb.convert("RGB").resize((480, 480), Image.Resampling.LANCZOS)
+    """pad a quadrato (preserva le proporzioni) + resize 480 + vignette dei bordi
+    verso near-black (come reference-3d-v6). Il pad evita che immagini non quadrate
+    (il modello a volte rende 1408x768) vengano schiacciate/stirate."""
+    image = ImageOps.pad(raw_rgb.convert("RGB"), (480, 480), method=Image.Resampling.LANCZOS, color=(0, 0, 0), centering=(0.5, 0.5))
     pixels = np.asarray(image, dtype=float)
     y, x = np.mgrid[:480, :480]
     distance = np.minimum.reduce([x, y, 479 - x, 479 - y])

@@ -87,7 +87,7 @@ export function categoryArtworkUrl(id: string, version: string, cutout = false, 
   // cached image/failure state when moving to the new sculptural 3D family.
   // `cutout` = solo l'oggetto 3D, senza lo sfondo nero dello studio;
   // `tight` = ritaglio stretto sull'oggetto (stessa altezza visiva delle altre icone 3D).
-  return `${BASE}/api/category-media/${encodeURIComponent(id)}?v=${encodeURIComponent(version)}&delivery=reference-3d-v7${cutout ? "&cutout=true&cut=2" : ""}${cutout && tight ? "&tight=true" : ""}`;
+  return `${BASE}/api/category-media/${encodeURIComponent(id)}?v=${encodeURIComponent(version)}&delivery=holo-v1c${cutout ? "&cutout=true&cut=2" : ""}${cutout && tight ? "&tight=true" : ""}`;
 }
 
 export type Chapter = {

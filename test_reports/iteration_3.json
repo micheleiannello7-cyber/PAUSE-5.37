@@ -1,0 +1,32 @@
+{
+  "summary": "Iter3 (frontend-only) — Validated the two new changes in PAUSE: (1) new compact-expandable 'Argomenti attivi' element in Home and (2) new 3D holo-v1c category icons. All target testIDs render and work on 390x844: home-active-topics-toggle, home-active-plus (+1 with 4 topics), home-active-topics-title, home-active-topics-body, home-active-mini-{scienza|spazio|natura}, and chevron (visible). Tap expands the body in-place (bbox height 0→290) and tap again collapses it (height 290→0). Expanded grid shows home-cat-{scienza|spazio|natura|animali} with the holo 3D images (home-category-art-{id}-image). Toggle flow: tapping a tile toggles its selection; turning off the last remaining active category triggers home-min-one-toast ('Keep at least one category active'). 3D icons: on Home (grid open) and on Topics (/(tabs)/explore) all images load — 25 images on Home, 40 images on Topics screen, 0 broken, no line-icon fallback element is instantiated (category-art-{id}-fallback not present when image is loaded). Resume card: no reading progress yet → correctly absent (resume-reading-card not rendered), as per spec. App language in web preview is English (I18n defaults from browser locale), but all target testIDs are language-independent. No red screens, console shows only pre-existing warnings (textShadow*, pointerEvents, Reanimated web easing).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "react_native_issues": []
+  },
+  "test_report_links": [
+    "/tmp/01_initial.png",
+    "/tmp/02_topics.png",
+    "/tmp/03_home.png",
+    "/tmp/04_expanded.png",
+    "/tmp/05_toast.png",
+    "/tmp/06_explore.png"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "home-active-topics.tsx uses an outer View height=openH wrapping ScrollView; naturalH vs maxH=winH*0.44 correctly caps panel height and enables internal scroll with nestedScrollEnabled — good; no overlap with bottom tab bar observed with 4 topics.",
+    "discover.tsx toggleCat correctly guards against disabling the last active id and shows the min-one toast via showMinOneToast(); works end-to-end.",
+    "category-artwork.tsx CategoryArtMark falls back to CategoryIcon on image onError — fallback did not trigger on holo-v1c, so icons render crisply with saturated colors.",
+    "ResumeCard is only mounted when showResume && resume (progress<0.95). Verified it does not appear for a fresh guest user — matches spec."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped per request)", "frontend": "100% on all tested flows (compact bar, expand/collapse, toggle, min-one toast, 3D icons on Home+Topics, resume-card absence)"},
+  "seed_data_creation": "Fresh guest user via onboarding (continue-as-guest + 4 selected topics scienza/spazio/natura/animali). No backend seeds beyond what onboarding creates.",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Base URL env is EXPO_PUBLIC_BACKEND_URL (frontend/.env). To reach Home from fresh session: tap [data-testid=\"onboarding-profile-continue\"] (Continue as guest), then click 2-4 [data-testid=\"category-art-{id}\"] tiles, then [data-testid=\"onboarding-continue\"]. Home testIDs for Argomenti attivi: home-active-topics (container), home-active-topics-toggle (tap to expand), home-active-topics-title, home-active-plus (+N when categories.length>3), home-active-mini-{id} (first 3 previews), home-active-topics-body (collapses to height 0 when closed), home-cat-{id} (tiles in expanded grid). Toast: home-min-one-toast + home-min-one-toast-text. 3D artwork image: category-art-{id}-image (onboarding/explore) and home-category-art-{id}-image (home grid); fallback testID is category-art-{id}-fallback / home-category-art-{id}-fallback (does NOT render while image loads successfully). The web preview locale defaults to English — testIDs do not depend on locale.",
+  "rca_of_issue": "N/A — all probed functionality works as specified."
+}

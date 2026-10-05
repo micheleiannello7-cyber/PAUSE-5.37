@@ -75,7 +75,12 @@ VERIFICA: leggere test_result.md → smoke screenshot → testing_agent sul flus
 #### (specifica originale)
 - Impostazione dimensione font nel lettore + preview tema dedicata. Letto `frontend/src/components/reader-section.tsx`. Verificare convenzioni tema/preferenze/persistenza prima.
 
-### ⬜ 6. Icone 3D Ologramma (DECISO, bloccato solo da budget LLM)
+### ✅ 6. Icone 3D Ologramma (FATTO — giugno 2026, PUBBLICATE holo-v1)
+- Generate 13 icone ologramma (`gen_category_holograms.py`) + pubblicate (`publish_holograms.py`): manifest `holo-v1`, DB aggiornato. Frontend: `category-artwork.tsx` ART_VERSION="holo-v1"; `api.ts` delivery token `holo-v1c` (cache-bust). `category_artwork.py` previous_prefixes include `reference-3d-v6/`.
+- FIX proporzioni: 5 icone (arte, corpo-umano, geografia, psicologia, scienza) venivano generate 1408x768 e schiacciate dal resize a 480². Nuovo `reproc_holo.py`: ritaglio automatico sull'oggetto (fondo nero) + fill costante 300/480 + vignette — riprocessa dai RAW già salvati, NIENTE costo LLM.
+- Colori più saturi su richiesta utente: `reproc_holo.py` applica `ImageEnhance.Color` fattore 1.5 a tutte le 13 (dai RAW, no LLM). Verificato a schermo (Esplora + Home).
+- NOTA: per riprocessare dai raw: `python reproc_holo.py <categorie...>` poi `python publish_holograms.py` poi bump delivery token in api.ts + restart backend/expo.
+#### (storico — specifica originale)
 Regola: ogni categoria conserva il PROPRIO colore identitario; tema PAUSE guida solo atmosfera UI. Mai fluo. Vecchie famiglie MAI cancellate (archiviate in Object Storage + manifest).
 Script pronti e resumable:
 - `backend/gen_category_holograms.py` (13 icone, fondo nero+vignette come reference-3d-v6, upload pause/category/holo-v1/, import-report.json, salta già fatte).
@@ -89,7 +94,11 @@ Passi dopo ricarica budget:
   6. smoke test + testing_agent su rendering icone.
 Frontend NON toccato: reference-3d-v6 resta attivo finché holo-v1 non esiste.
 
-### ⬜ 7. Copertine con meno volti/persone AI (IN PAUSA ESPLICITA — "Ci pensiamo più in là")
+### 🟡 7. Copertine con meno volti/persone AI (IN CORSO — BLOCCATO da budget LLM)
+- Utente (giu 2026): procedere con sostituzione copertine "se avanzano crediti".
+- Stato: `scan` già fatto (177 segnalate su 493). `plan` eseguito PARZIALE: 66/177 pianificate (63 replace, 3 keep) poi RateLimitError "Budget exceeded". `apply` NON ancora eseguito (0 copertine sostituite).
+- Ripresa dopo ricarica budget: `cd backend && python reduce_faces.py plan` (continua dalle mancanti), poi `python reduce_faces.py apply --limit N` a lotti piccoli (genera immagini = costoso; si ferma da solo su budget error). Backup originali in covers_backup_pre_nofaces/; `restore <id>` disponibile.
+#### (storico — specifica originale)
 - NON riprendere senza nuova richiesta. Script `backend/reduce_faces.py` (solo sintassi verificata).
 - Audit su 493 cover: persone none260/prominent170/minor63; volti none335/clear108/partial50; ~177 segnalate. Bozza piano 64 replace scartata (editor troppo aggressivo, prompt reso prudente).
 - Dopo ricarica: `python reduce_faces.py plan` poi `apply`. Backup in covers_backup_pre_nofaces/, restore <id> disponibile.
@@ -125,6 +134,12 @@ Frontend NON toccato: reference-3d-v6 resta attivo finché holo-v1 non esiste.
 - Prefetch delle icone categoria delle card vicine (`neighbors`) così non compaiono in ritardo.
 - `category-artwork.tsx` esporta `CATEGORY_ART_VERSION`.
 
-## Iterazione — Messa a fuoco copertina (Home)
+## Iterazione — Home: "Argomenti attivi" compatto + card Riprendi (giu 2026)
+- Nuovo `src/components/home-active-topics.tsx`: in Home, al posto di "Le tue categorie" (carosello), un elemento COMPATTO (`HomeActiveTopics`): chiuso mostra 3 mini icone 3D sovrapposte + "+X" + "Argomenti attivi" + conteggio + chevron. Tocco → espande IN-PLACE una griglia 3-col di tutte le categorie attive (tessere `HomeCategoryTile`), comparsa in sequenza (`FadeInDown` stagger), chevron ruota. Il toggle on/off (focus del mazzo) resta nella griglia espansa; avviso "almeno una categoria" invariato.
+- Pannello espanso con altezza massima (`winH*0.44`) e ScrollView interno quando gli argomenti superano lo spazio: la Home non viene mai sforata, tutti gli argomenti raggiungibili. Animazione altezza via SharedValue `progress`.
+- `discover.tsx`: rimosso `.slice(0,8)` da `tileCats` (mostra TUTTI gli argomenti scelti). Import carosello rimosso (componente ancora presente ma non usato in Home).
+- i18n: `active_topics`, `active_topics_count`, `active_topics_count_one` (IT+EN).
+- `resume-card.tsx`: card "Riprendi" resa più compatta (thumb 62→54, play 38→34, padding/gap ridotti) mantenendo immagine, %, titolo, eyebrow "RIPRENDI", barra progresso, play. Nessuna modifica alla logica di ripresa.
+
 - `home-story-card.tsx`: sopra la foto nitida una copia sfocata (`blurRadius` 5) la cui opacità segue la distanza dal centro (`defocus`, SharedValue 0→1 da `home-story-deck.tsx`): la copertina entra a fuoco mentre la card arriva al centro. Disattivato con "riduci movimento"; solo per storie con foto.
 - `story-hero.tsx`: nuova prop `blurRadius`.

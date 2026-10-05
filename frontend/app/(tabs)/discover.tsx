@@ -15,7 +15,7 @@ import { getReadingProgress, ReadingProgress } from "@/src/reading-progress";
 import { getHomeOffCategories, saveHomeOffCategories } from "@/src/home-focus";
 import { PauseLogo } from "@/src/components/pause-logo";
 import { GradientButton } from "@/src/components/gradient-button";
-import { HomeCategoryCarousel } from "@/src/components/home-category-carousel";
+import { HomeActiveTopics } from "@/src/components/home-active-topics";
 import { HomeExploreTile } from "@/src/components/home-controls";
 import { HomeStoryDeck, CardRect, DECK_BELOW_CARD_H } from "@/src/components/home-story-deck";
 import { StoryMorph, MORPH_DURATION, MORPH_EASING } from "@/src/components/story-morph";
@@ -81,7 +81,7 @@ export default function Discover() {
     return [...(mine.length ? mine : all)].sort((a, b) => {
       const rank = (id: string) => order.includes(id) ? order.indexOf(id) : order.length;
       return rank(a.id) - rank(b.id);
-    }).slice(0, 8);
+    });
   }, [categories, interests, exploreMode]);
   // Tessere spente dall'utente in Home (multi-selezione, salvata sul dispositivo).
   // Di default tutte le categorie scelte sono accese; almeno una resta sempre accesa.
@@ -326,10 +326,7 @@ export default function Discover() {
           </View>
         ) : tileCats.length ? (
           <View style={styles.catsSection} testID="home-categories">
-            <View style={[styles.catsHead, { paddingHorizontal: gridPadding }]}>
-              <Text testID="home-categories-title" style={styles.catsTitle}>{t.your_categories}</Text>
-            </View>
-            <HomeCategoryCarousel
+            <HomeActiveTopics
               categories={tileCats} activeIds={activeIds} onToggle={toggleCat} width={width} padding={gridPadding}
               overlay={toastVisible ? (
                 <RNAnimated.View pointerEvents="none" style={[styles.toastWrap, { opacity: toastOpacity }]} testID="home-min-one-toast">

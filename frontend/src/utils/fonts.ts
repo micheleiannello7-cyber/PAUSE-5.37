@@ -9,6 +9,13 @@ export const FONT_SOURCES = {
   PlusJakartaSans_600SemiBold: require("../../assets/fonts/PlusJakartaSans-SemiBold.ttf"),
   PlusJakartaSans_700Bold: require("../../assets/fonts/PlusJakartaSans-Bold.ttf"),
   PlusJakartaSans_800ExtraBold: require("../../assets/fonts/PlusJakartaSans-ExtraBold.ttf"),
+  // Font delle icone, caricati subito: altrimenti la prima icona di una
+  // famiglia nuova (es. MaterialDesignIcons nella fine della lettura) carica
+  // il font a runtime e il browser ridisegna per un fotogramma tutto il testo
+  // con il font di sistema — un "flash" visibile alla fine della transizione.
+  Ionicons: require("@react-native-vector-icons/ionicons/fonts/Ionicons.ttf"),
+  Feather: require("@react-native-vector-icons/feather/fonts/Feather.ttf"),
+  MaterialDesignIcons: require("@react-native-vector-icons/material-design-icons/fonts/MaterialDesignIcons.ttf"),
 };
 
 // Resolves to `true` once fonts are loaded. Fail-open after 3s so a hanging
