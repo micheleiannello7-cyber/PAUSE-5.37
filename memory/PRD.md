@@ -124,3 +124,7 @@ Frontend NON toccato: reference-3d-v6 resta attivo finché holo-v1 non esiste.
 - `src/components/deck-badges.tsx`: al cambio card i 3 dati (Tipo · Categoria · Durata) fanno un crossfade vero (vecchio svanisce mentre il nuovo compare sopra, 180ms, lieve scorrimento verticale), senza vuoto tra i due; interrompibile a metà scorrendo veloce.
 - Prefetch delle icone categoria delle card vicine (`neighbors`) così non compaiono in ritardo.
 - `category-artwork.tsx` esporta `CATEGORY_ART_VERSION`.
+
+## Iterazione — Messa a fuoco copertina (Home)
+- `home-story-card.tsx`: sopra la foto nitida una copia sfocata (`blurRadius` 5) la cui opacità segue la distanza dal centro (`defocus`, SharedValue 0→1 da `home-story-deck.tsx`): la copertina entra a fuoco mentre la card arriva al centro. Disattivato con "riduci movimento"; solo per storie con foto.
+- `story-hero.tsx`: nuova prop `blurRadius`.

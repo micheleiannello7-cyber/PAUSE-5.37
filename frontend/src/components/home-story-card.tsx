@@ -2,16 +2,22 @@ import { useState } from "react";
 import { View, Text, Pressable, StyleSheet, useWindowDimensions } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 import { LinearGradient } from "expo-linear-gradient";
-import Animated, { useAnimatedStyle, useSharedValue, withSpring, withTiming } from "react-native-reanimated";
+import Animated, { useAnimatedStyle, useSharedValue, withSpring, withTiming, type SharedValue } from "react-native-reanimated";
 import * as Haptics from "@/src/haptics";
-import { StoryPreview, isLesson } from "@/src/api";
+import { StoryPreview, isLesson, hasHero } from "@/src/api";
 import { makeStyles, typography, useTheme, withAlpha } from "@/src/theme";
 import { useI18n } from "@/src/i18n";
 import { StoryHero } from "./story-hero";
 import { HighlightedTitle } from "./highlighted-title";
 
-export function HomeStoryCard({ story, active, instance, onOpen, onListen }: {
+// Sfocatura della copertina quando la card è di lato: leggera, sparisce del
+// tutto appena la card arriva al centro ("messa a fuoco").
+const DEFOCUS_BLUR = 5;
+
+export function HomeStoryCard({ story, active, instance, onOpen, onListen, defocus }: {
   story: StoryPreview; active: boolean; instance: string; onOpen: () => void; onListen?: () => void;
+  /** 0 = card al centro (nitida) → 1 = card di lato (fuori fuoco). */
+  defocus?: SharedValue<number>;
 }) {
   const styles = useStyles();
   const { colors } = useTheme();
@@ -28,9 +34,18 @@ export function HomeStoryCard({ story, active, instance, onOpen, onListen }: {
   const bodyStyle = useAnimatedStyle(() => ({ opacity: 1 - preview.value }));
   const showPreview = () => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {}); preview.value = withSpring(1, { damping: 22, stiffness: 230, overshootClamping: true }); };
   const hidePreview = () => { preview.value = withTiming(0, { duration: 220 }); };
+  // La copia sfocata sta sopra la foto nitida e si dissolve man mano che la
+  // card si avvicina al centro: la copertina "entra a fuoco" con lo scorrimento.
+  const blurStyle = useAnimatedStyle(() => ({ opacity: defocus ? Math.min(1, defocus.value * 1.5) : 0 }));
+  const showBlur = !!defocus && hasHero(story);
   return (
     <View style={styles.card} testID={active ? `story-card-${story.id}` : `deck-card-${story.id}-${instance}`}>
       <StoryHero story={story} style={StyleSheet.absoluteFill} iconSize={64} transition={0} />
+      {showBlur && (
+        <Animated.View style={[StyleSheet.absoluteFill, styles.noTouch, blurStyle]} pointerEvents="none" testID={`${id}-defocus`}>
+          <StoryHero story={story} style={StyleSheet.absoluteFill} iconSize={64} transition={0} blurRadius={DEFOCUS_BLUR} />
+        </Animated.View>
+      )}
       {/* Bottom scrim: title and badges always sit on a near-opaque dark band, whatever the artwork. */}
       <LinearGradient colors={[withAlpha(colors.artworkSurface, 0), withAlpha(colors.artworkSurface, 0.1), withAlpha(colors.artworkSurface, 0.86), withAlpha(colors.artworkSurface, 0.97)]}
         locations={[0, 0.42, 0.74, 1]} style={[StyleSheet.absoluteFill, styles.noTouch]} />

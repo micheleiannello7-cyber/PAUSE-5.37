@@ -2,7 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { View } from "react-native";
 import { useFocusEffect } from "expo-router";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
-import Animated, { cancelAnimation, Easing, Extrapolation, interpolate, runOnJS, runOnUI, useAnimatedStyle, useReducedMotion, useSharedValue, withSequence, withSpring, withTiming, type SharedValue } from "react-native-reanimated";
+import Animated, { cancelAnimation, Easing, Extrapolation, interpolate, runOnJS, runOnUI, useAnimatedStyle, useDerivedValue, useReducedMotion, useSharedValue, withSequence, withSpring, withTiming, type SharedValue } from "react-native-reanimated";
 import { play as playSound } from "@/src/sounds";
 import { StoryPreview } from "@/src/api";
 import { makeStyles } from "@/src/theme";
@@ -197,6 +197,12 @@ function StoryLayer({ story, slot, page, width, left, stride, position, tx, nudg
     }));
     return () => register(null);
   }, [register]);
+  // Distanza dal centro (0 = centrata, 1 = di lato): guida la "messa a fuoco"
+  // della copertina. Il movimento idle (nudge) è minimo e non sfoca nulla di visibile.
+  const defocus = useDerivedValue(() => {
+    if (reducedMotion) return 0;
+    return Math.min(Math.abs(page - position.value + tx.value / stride), 1);
+  });
   const animatedStyle = useAnimatedStyle(() => {
     const offset = page - position.value;
     const shift = tx.value / stride;
@@ -223,7 +229,7 @@ function StoryLayer({ story, slot, page, width, left, stride, position, tx, nudg
   });
   return (
     <Animated.View ref={layerRef} testID={`deck-layer-${slot === 0 ? "active" : slot < 0 ? "previous" : "next"}`} style={[styles.layer, { width, left }, animatedStyle]}>
-      <HomeStoryCard story={story} active={slot === 0} instance={`slot-${slot}`} onOpen={open} onListen={onListen} />
+      <HomeStoryCard story={story} active={slot === 0} instance={`slot-${slot}`} onOpen={open} onListen={onListen} defocus={defocus} />
     </Animated.View>
   );
 }

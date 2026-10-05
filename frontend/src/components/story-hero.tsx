@@ -11,7 +11,7 @@ import { StoryPreview, heroUrl } from "@/src/api";
 import { makeStyles, spacing } from "@/src/theme";
 
 export function StoryHero({
-  story, style, iconSize = 64, transition = 200, size = "hero",
+  story, style, iconSize = 64, transition = 200, size = "hero", blurRadius,
 }: {
   story: StoryPreview;
   style?: StyleProp<ViewStyle>;
@@ -19,6 +19,8 @@ export function StoryHero({
   transition?: number;
   /** "thumb" requests the ≤600px variant for list thumbnails. */
   size?: "hero" | "thumb";
+  /** Copia sfocata della stessa foto (effetto "fuori fuoco" nel mazzo della Home). */
+  blurRadius?: number;
 }) {
   const styles = useStyles();
   const instance = useId();
@@ -31,7 +33,7 @@ export function StoryHero({
     return (
       <Image
         testID={`${testID}-image`} accessibilityLabel={story.title}
-        source={{ uri }} style={style as StyleProp<ImageStyle>} contentFit="cover" transition={transition}
+        source={{ uri }} style={style as StyleProp<ImageStyle>} contentFit="cover" transition={transition} blurRadius={blurRadius}
         cachePolicy="memory-disk" recyclingKey={uri}
         onError={() => setFailedUris((current) => current.includes(uri) ? current : [...current, uri])}
       />
