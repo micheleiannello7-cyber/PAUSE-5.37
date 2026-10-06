@@ -46,9 +46,13 @@ export function HomeActiveTopics({ categories, activeIds, onToggle, width, paddi
     progress.value = withTiming(next ? 1 : 0, { duration: 280 });
   };
 
-  const tileSize = Math.floor((width - padding * 2 - GRID_GAP * 2) / 3);
+  const avail = width - padding * 2;
+  // Tessere ridotte ~35% rispetto alla griglia a 3 colonne: più piccole e ariose
+  // nell'espansione in Home; le colonne si adattano (più tessere per riga).
+  const tileSize = Math.round(((avail - GRID_GAP * 2) / 3) * 0.65);
+  const cols = Math.max(3, Math.floor((avail + GRID_GAP) / (tileSize + GRID_GAP)));
   const tileH = Math.round(tileSize * 1.32);
-  const rows = Math.ceil(categories.length / 3);
+  const rows = Math.ceil(categories.length / cols);
   const naturalH = GRID_PAD_TOP + rows * tileH + Math.max(0, rows - 1) * GRID_GAP;
   const maxH = Math.round(winH * 0.44);
   const openH = Math.min(naturalH, maxH);

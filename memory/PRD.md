@@ -134,7 +134,13 @@ Frontend NON toccato: reference-3d-v6 resta attivo finché holo-v1 non esiste.
 - Prefetch delle icone categoria delle card vicine (`neighbors`) così non compaiono in ritardo.
 - `category-artwork.tsx` esporta `CATEGORY_ART_VERSION`.
 
-## Iterazione — Home: "Argomenti attivi" compatto + card Riprendi (giu 2026)
+## Iterazione — Rifiniture Home/transizione/bottom bar (giu 2026)
+- FIX flash fine transizione Home→Lettura (`app/deep-dive/[id].tsx`): `chaptersReady` ora si attiva su `morphHost.ready` (lettore "pronto" → animazione già finita, overlay in dissolvenza) invece di 40ms DOPO lo scambio; il montaggio pesante avviene nascosto sotto la dissolvenza. Rete di sicurezza 1200ms. Testato (iteration_4): apertura/ritorno OK.
+- Icone 3D più grandi nel container: `reproc_holo.py` TARGET_FILL 300→340 (~71%), riprocessate dai raw + ripubblicate; delivery token `holo-v1d`.
+- Ordine categorie: `server.py` /categories — corpo-umano spostato IN FONDO (scala cromatica continua, rosso dopo rosa). `discover.tsx` tileCats ora preserva l'ordine cromatico dell'API (niente sort custom).
+- Home "Argomenti attivi" griglia espansa: tessere ridotte ~35% (0.65× della 3-col), colonne adattive (4 col su telefono) — con 12 argomenti stanno tutte senza scroll.
+- Bottom bar (`glass-tab-bar.tsx`): rimossi angoli superiori arrotondati (barra a filo edge-to-edge, niente tagli neri agli angoli) e ridotta ~20% (icone 34→28, item 58→46, iconWrap/halo/label/indicator scalati, paddingTop 6→4, floor bottom 10→8). Icone tab (`tab-icon-3d.tsx`, `topics-tile-icon.tsx`) 34→28.
+
 - Nuovo `src/components/home-active-topics.tsx`: in Home, al posto di "Le tue categorie" (carosello), un elemento COMPATTO (`HomeActiveTopics`): chiuso mostra 3 mini icone 3D sovrapposte + "+X" + "Argomenti attivi" + conteggio + chevron. Tocco → espande IN-PLACE una griglia 3-col di tutte le categorie attive (tessere `HomeCategoryTile`), comparsa in sequenza (`FadeInDown` stagger), chevron ruota. Il toggle on/off (focus del mazzo) resta nella griglia espansa; avviso "almeno una categoria" invariato.
 - Pannello espanso con altezza massima (`winH*0.44`) e ScrollView interno quando gli argomenti superano lo spazio: la Home non viene mai sforata, tutti gli argomenti raggiungibili. Animazione altezza via SharedValue `progress`.
 - `discover.tsx`: rimosso `.slice(0,8)` da `tileCats` (mostra TUTTI gli argomenti scelti). Import carosello rimosso (componente ancora presente ma non usato in Home).

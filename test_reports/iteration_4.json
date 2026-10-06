@@ -1,0 +1,32 @@
+{
+  "summary": "Iter4 (frontend-only) — Validated the deep-dive mount fix (chaptersReady now gated on morphHost.ready instead of 40ms post-dismiss) and the regressions on Home 'Argomenti attivi' (4 columns) and Esplora category ordering. All four target flows pass on 390x844. Home→Lettura: tap on top deck card [data-testid^=\"deck-card-\"] triggers story-morph overlay, deep-dive-scroll becomes visible, URL morphs to /deep-dive/<id>?morph=1&rect=…, story-morph is dismissed after settle (not stuck), all chapters mount (deep-dive-page-chapter-1 … chapter-6 + deep-dive-page-end). No white screen, no overlay stuck, no console errors. Wheel steps correctly advance from intro → ch1 → ch2 … → end (deep-dive-page-end bbox walked from y=4736 up to y=64, confirming the full reader is scrollable to the end). Lettura→Home: tapping the reader back chevron returns to /discover with [data-testid=\"home-screen\"] mounted and the card visible; the credits badge decremented 4→3, confirming the complete-callback also fired. Home 4-col grid: expanding [data-testid=\"home-active-topics-toggle\"] renders home-cat-* tiles in 4 columns (row1: animali, storia, natura, scienza — tile x=30/108/186/264 w=66). Esplora: /(tabs)/explore grid renders all 12 category tiles with their 3D artwork images (category-art-<id>-image all mounted, 0 broken images, 0 fallback testIDs present), and the LAST tile at bottom-right is category-art-corpo-umano ✅. No red screen; only pre-existing warnings (textShadow*, pointerEvents, Reanimated 'easing not supported on web→linear').",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "react_native_issues": []
+  },
+  "test_report_links": [
+    "/tmp/t_morph.png",
+    "/tmp/t_reader_intro.png",
+    "/tmp/t_reader_end.png",
+    "/tmp/t_home_after_back.png",
+    "/tmp/t_expanded.png",
+    "/tmp/t_explore.png"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "deep-dive/[id].tsx: chaptersReady now flips when morphHost.ready becomes true (set via markReady() 32ms after introMeasured). The 1200ms safety timer is retained — good defensive design. Verified in-browser that the overlay fades and chapters mount with no visible 'refresh' flash.",
+    "story-morph.tsx: dismiss path waits for both animDone and readerReady — matches the new reader markReady contract and avoids racing the fade with the heavy chapter mount.",
+    "home-active-topics.tsx: cols are computed from avail/tileSize with a floor of 3; on 390px viewport with 7 tiles it correctly produces 4 columns. No overflow into the tab bar observed.",
+    "discover.tsx tileCats comment confirms corpo-umano (red) is intentionally last in the chromatic scale; verified corpo-umano is the final tile on Esplora (bottom-right) and would be last on Home if the user had selected it."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped per request)", "frontend": "100% on all four requested flows (open morph, chapter mount & scroll to end, back to home, Home 4-col grid, Esplora corpo-umano last with 3D icons)"},
+  "seed_data_creation": "Fresh guest user via onboarding (continue-as-guest + 7 selected topics: animali/storia/natura/scienza/tecnologia/spazio/arte).",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Base URL env is EXPO_PUBLIC_BACKEND_URL (frontend/.env=https://ciao-chat-478.preview.emergentagent.com). To reach Home from fresh guest: tap [data-testid=\"onboarding-profile-continue\"] then click 2+ [data-testid=\"category-art-{id}\"] tiles then [data-testid=\"onboarding-continue\"]. Key testIDs: home-screen, home-deck-area, home-story-deck, deck-card-<slug>-slot-1 (top deck card to tap), home-active-topics-toggle, home-cat-<id> (grid tiles), home-active-topics-body. Reader: deep-dive-scroll, deep-dive-page-chapter-<n>, deep-dive-page-end. During transition: story-morph. Advance chapters programmatically via page.mouse.wheel(0, 300) with ~900ms between steps (gesture handler uses 40-unit accumulator + 760ms lockout). Back navigation on web preview: use page.go_back() (ReaderHeader back chevron testID not currently exposed as 'reader-back'). The browser locale sets the UI to English in the web preview; app i18n keys still resolve correctly and testIDs are language-independent.",
+  "rca_of_issue": "N/A — fix validated. No regressions observed."
+}

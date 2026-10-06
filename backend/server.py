@@ -635,8 +635,8 @@ async def list_categories(lang: Optional[str] = Query("it")):
     # una palette e i colori simili stanno vicini. Solo presentazione: nessuna
     # logica (badge "Nuova", sblocchi, conteggi) dipende da quest'ordine.
     order = {cid: i for i, cid in enumerate([
-        "corpo-umano", "animali", "storia", "economia", "natura", "geografia",
-        "cultura", "scienza", "tecnologia", "spazio", "arte", "psicologia",
+        "animali", "storia", "economia", "natura", "geografia",
+        "cultura", "scienza", "tecnologia", "spazio", "arte", "psicologia", "corpo-umano",
     ])}
     docs.sort(key=lambda d: order.get(d["id"], len(order)))
     # Count curiosità and mini lezioni separately: the grid says "N storie",

@@ -30,4 +30,4 @@ export function TabIcon3D({ route, focused, testID }: {
   );
 }
 
-const styles = StyleSheet.create({ icon: { width: 34, height: 34 } });
+const styles = StyleSheet.create({ icon: { width: 28, height: 28 } });

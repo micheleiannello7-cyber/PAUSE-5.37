@@ -88,4 +88,4 @@ export function TopicsTileIcon({ focused, testID }: { focused: boolean; testID: 
   );
 }
 
-const styles = StyleSheet.create({ icon: { width: 34, height: 34 } });
+const styles = StyleSheet.create({ icon: { width: 28, height: 28 } });

@@ -87,11 +87,17 @@ export default function DeepDive() {
   // dentro l'animazione o nello scambio. Apertura diretta su un capitolo o
   // senza transizione: tutto subito.
   const [chaptersReady, setChaptersReady] = useState(morph !== "1" || start === "1");
+  // Capitoli e fine si montano appena il lettore ha segnalato "pronto"
+  // (markReady): in quel momento l'animazione è già finita e il livello di
+  // transizione sta sfumando, quindi il lavoro pesante avviene NASCOSTO sotto
+  // la dissolvenza — niente "refresh"/scatto subito dopo lo scambio. Rete di
+  // sicurezza: se il segnale non arrivasse, i capitoli compaiono comunque.
   useEffect(() => {
-    if (chaptersReady || morphHost.active) return;
-    const timer = setTimeout(() => setChaptersReady(true), 40);
-    return () => clearTimeout(timer);
-  }, [chaptersReady, morphHost.active]);
+    if (chaptersReady) return;
+    if (morphHost.ready) { setChaptersReady(true); return; }
+    const safety = setTimeout(() => setChaptersReady(true), 1200);
+    return () => clearTimeout(safety);
+  }, [chaptersReady, morphHost.ready]);
   const completedRef = useRef<string | null>(null);
   const endSoundRef = useRef(false);
   const shareRef = useRef<View>(null);

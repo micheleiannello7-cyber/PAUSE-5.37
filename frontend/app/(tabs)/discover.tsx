@@ -77,11 +77,9 @@ export default function Discover() {
     if (exploreMode) return [];
     const all = categories ?? [];
     const mine = interests.length ? all.filter((c) => interests.includes(c.id)) : all;
-    const order = ["scienza", "spazio", "tecnologia", "natura", "animali", "storia", "arte", "corpo-umano"];
-    return [...(mine.length ? mine : all)].sort((a, b) => {
-      const rank = (id: string) => order.includes(id) ? order.indexOf(id) : order.length;
-      return rank(a.id) - rank(b.id);
-    });
+    // Ordine = scala cromatica dell'API (corpo-umano/rosso va in fondo): coerente
+    // con la griglia Argomenti, i colori simili restano vicini.
+    return mine.length ? mine : all;
   }, [categories, interests, exploreMode]);
   // Tessere spente dall'utente in Home (multi-selezione, salvata sul dispositivo).
   // Di default tutte le categorie scelte sono accese; almeno una resta sempre accesa.

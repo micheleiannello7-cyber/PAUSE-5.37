@@ -27,7 +27,7 @@ export function GlassTabBar({ state, descriptors, navigation }: Props) {
   const insets = useSafeAreaInsets();
   const styles = useStyles();
   return (
-    <View style={[styles.bar, { paddingBottom: Math.max(insets.bottom, 10) }]} testID="glass-tab-bar">
+    <View style={[styles.bar, { paddingBottom: Math.max(insets.bottom, 8) }]} testID="glass-tab-bar">
       <View style={StyleSheet.absoluteFill} pointerEvents="none">
         <BlurView intensity={38} tint={scheme === "dark" ? "dark" : "light"} experimentalBlurMethod="dimezisBlurView" style={StyleSheet.absoluteFill} />
         <View style={[StyleSheet.absoluteFill, { backgroundColor: colors.overlay }]} />
@@ -79,18 +79,18 @@ export function GlassTabBar({ state, descriptors, navigation }: Props) {
 
 const useStyles = makeStyles((colors) => ({
   bar: {
-    borderTopLeftRadius: 24, borderTopRightRadius: 24, overflow: "hidden",
+    overflow: "hidden",
     borderTopWidth: 1, borderTopColor: colors.glassBorder,
-    backgroundColor: "transparent", paddingTop: 6,
+    backgroundColor: "transparent", paddingTop: 4,
   },
-  sheen: { position: "absolute", top: 0, left: 0, right: 0, height: 34 },
+  sheen: { position: "absolute", top: 0, left: 0, right: 0, height: 28 },
   topLine: { position: "absolute", top: 0, left: 36, right: 36, height: 1 },
   row: { flexDirection: "row", alignItems: "flex-start" },
-  item: { flex: 1, minHeight: 58, alignItems: "center", justifyContent: "flex-start", paddingTop: 2 },
+  item: { flex: 1, minHeight: 46, alignItems: "center", justifyContent: "flex-start", paddingTop: 2 },
   pressed: { opacity: 0.7 },
-  iconWrap: { width: 38, height: 34, alignItems: "center", justifyContent: "center" },
-  halo: { position: "absolute", width: 30, height: 30, borderRadius: 15 },
-  label: { fontFamily: typography.bodyMedium, fontSize: 11, lineHeight: 14, marginTop: 1 },
+  iconWrap: { width: 32, height: 28, alignItems: "center", justifyContent: "center" },
+  halo: { position: "absolute", width: 24, height: 24, borderRadius: 12 },
+  label: { fontFamily: typography.bodyMedium, fontSize: 10.5, lineHeight: 13, marginTop: 1 },
   labelOn: { fontFamily: typography.bodyBold },
-  indicator: { width: 16, height: 3, borderRadius: 2, marginTop: 3, backgroundColor: "transparent" },
+  indicator: { width: 15, height: 3, borderRadius: 2, marginTop: 2, backgroundColor: "transparent" },
 }));

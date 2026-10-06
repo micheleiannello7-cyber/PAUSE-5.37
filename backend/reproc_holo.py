@@ -22,7 +22,7 @@ VERSION = "holo-v1"
 RAW_DIR = ROOT / "category_art" / VERSION / "raw"
 OUT_DIR = ROOT / "category_art" / VERSION
 REPORT_PATH = OUT_DIR / "import-report.json"
-TARGET_FILL = 300  # lato lungo dell'oggetto dentro il frame 480 (~62%, come le altre)
+TARGET_FILL = 340  # lato lungo dell'oggetto dentro il frame 480 (~71%): icone più grandi nel container
 SATURATION = 1.5   # colori più vivi mantenendo il glow olografico
 
 
