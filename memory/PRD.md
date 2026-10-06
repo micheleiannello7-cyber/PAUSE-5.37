@@ -134,7 +134,12 @@ Frontend NON toccato: reference-3d-v6 resta attivo finché holo-v1 non esiste.
 - Prefetch delle icone categoria delle card vicine (`neighbors`) così non compaiono in ritardo.
 - `category-artwork.tsx` esporta `CATEGORY_ART_VERSION`.
 
-## Iterazione — Rifiniture Home/transizione/bottom bar (giu 2026)
+## Iterazione — Tab Argomenti: icone cutout + layout senza scroll (giu 2026)
+- Icone categoria ora SENZA sfondo nero: `CategoryArtwork` ramo `reference` usa `categoryArtworkUrl(id, v, cutout=true, tight=true)` → oggetto 3D ritagliato (PNG RGBA, glow+ombra) sul vetro della tessera. `referenceFill` → transparent (si vede il gradiente vetro). Vale sia per il tab Argomenti sia per la griglia Home espansa (HomeCategoryTile non passa iconUri → stesso ramo).
+- Icone +20% e tutte uguali: `category-grid.tsx` artBox 82%→96% (top 2→1, left 9→2%).
+- Schermata Argomenti tutta in una videata SENZA scroll: `explore.tsx` non usa più ScrollView, passa `fit` a `TopicPicker` (griglia dimensionata all'altezza rimasta, come onboarding). 
+- Selettore formato spostato: nuova prop `TopicPicker.modesLabel` → quando presente, le pillole Curiosità/Impara NON stanno in cima ma appena SOPRA la griglia (sopra EXPLORE) sotto il mini-titolo `t.reading_type` ("Tipo di lettura"/"Reading type"). Onboarding invariato (senza modesLabel, chips in cima).
+
 - FIX flash fine transizione Home→Lettura (`app/deep-dive/[id].tsx`): `chaptersReady` ora si attiva su `morphHost.ready` (lettore "pronto" → animazione già finita, overlay in dissolvenza) invece di 40ms DOPO lo scambio; il montaggio pesante avviene nascosto sotto la dissolvenza. Rete di sicurezza 1200ms. Testato (iteration_4): apertura/ritorno OK.
 - Icone 3D più grandi nel container: `reproc_holo.py` TARGET_FILL 300→340 (~71%), riprocessate dai raw + ripubblicate; delivery token `holo-v1d`.
 - Ordine categorie: `server.py` /categories — corpo-umano spostato IN FONDO (scala cromatica continua, rosso dopo rosa). `discover.tsx` tileCats ora preserva l'ordine cromatico dell'API (niente sort custom).

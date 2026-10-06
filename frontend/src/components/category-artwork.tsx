@@ -28,7 +28,7 @@ export function CategoryArtwork({ category, ...props }: ArtworkProps) {
   const uri = props.uriOverride
     ? props.uriOverride
     : props.reference
-    ? categoryArtworkUrl(category.id, category.illustration_generated || ART_VERSION)
+    ? categoryArtworkUrl(category.id, category.illustration_generated || ART_VERSION, true, true)
     : props.glass
     ? categoryArtworkUrl(category.id, category.id === "all" ? ART_VERSION : (category.illustration_generated || ART_VERSION), true)
     : category.id === "all"
@@ -76,7 +76,7 @@ function Artwork({ category, uri, testID, wide = false, compact = false, cornerR
 const useStyles = makeStyles((colors) => ({
   fill: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: colors.artworkSurface, overflow: "hidden", pointerEvents: "none" },
   glassFill: { backgroundColor: "transparent" },
-  referenceFill: { backgroundColor: palette.surface },
+  referenceFill: { backgroundColor: "transparent" },
   referenceImage: { top: 1, left: "1%", width: "98%", aspectRatio: 1 },
   image: { position: "absolute", top: -2, left: "5%", width: "90%", aspectRatio: 1 },
   compactImage: { top: 0, left: "9%", width: "82%" },

@@ -22,10 +22,13 @@ type Props = {
   titleAccessory?: ReactNode; status?: ReactNode; columns?: number;
   /** Schermo intero senza scorrimento: spaziature compatte e griglia adattata all'altezza rimasta. */
   fit?: boolean;
+  /** Se presente: sposta il selettore formato (Curiosità/Impara) SOTTO il riquadro
+   *  informativo, appena sopra la griglia, con questo mini-titolo (tab Argomenti). */
+  modesLabel?: string;
 };
 
 export function TopicPicker({ categories, selected, modes, onToggleCategory, onToggleMode, lockedModes,
-  testID, modeIdPrefix = "onboarding", disabled = false, staggerIn = false, titleAccessory, status, columns, fit = false }: Props) {
+  testID, modeIdPrefix = "onboarding", disabled = false, staggerIn = false, titleAccessory, status, columns, fit = false, modesLabel }: Props) {
   const { t } = useI18n();
   const formats = modes.size === 2 ? t.onb_formats_both : modes.has("lessons") ? t.onb_formats_lessons : t.onb_formats_stories;
   // Titolo su una sola riga: il corpo segue la larghezza disponibile accanto
@@ -37,7 +40,9 @@ export function TopicPicker({ categories, selected, modes, onToggleCategory, onT
   const gap = fit ? styles.gapFit : styles.gap;
   return (
     <View style={[styles.content, fit && styles.contentFit]} testID={`${testID}-picker`}>
-      <ModeChips modes={modes} onToggle={onToggleMode} disabled={disabled} idPrefix={modeIdPrefix} style={gap} locked={lockedModes} />
+      {!modesLabel ? (
+        <ModeChips modes={modes} onToggle={onToggleMode} disabled={disabled} idPrefix={modeIdPrefix} style={gap} locked={lockedModes} />
+      ) : null}
       <View style={[styles.titleRow, gap]}>
         <View style={styles.titleBox} onLayout={(e) => setTitleW(Math.floor(e.nativeEvent.layout.width))}>
           <Text style={[styles.title, { fontSize: titleSize, lineHeight: Math.round(titleSize * 1.25) }]} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.7} testID={`${testID}-title`}>{t.onb_title}</Text>
@@ -60,6 +65,12 @@ export function TopicPicker({ categories, selected, modes, onToggleCategory, onT
         </View>
       </Animated.View>
       {status}
+      {modesLabel ? (
+        <View style={[styles.modesBelow, gap]} testID={`${testID}-reading-type`}>
+          <Text style={styles.modesLabelTxt} testID={`${testID}-reading-type-label`}>{modesLabel}</Text>
+          <ModeChips modes={modes} onToggle={onToggleMode} disabled={disabled} idPrefix={modeIdPrefix} style={styles.modesChipsTight} locked={lockedModes} />
+        </View>
+      ) : null}
       {fit ? (
         <View style={styles.gridFit} onLayout={(e) => setGridH(Math.floor(e.nativeEvent.layout.height))}>
           {gridH > 0 ? (
@@ -92,6 +103,9 @@ const styles = StyleSheet.create({
   gap: { marginBottom: spacing.lg },
   gapFit: { marginBottom: spacing.sm + 2 },
   gridFit: { flex: 1, minHeight: 0 },
+  modesBelow: { gap: spacing.xs + 2 },
+  modesLabelTxt: { color: ONB.cyan, fontFamily: typography.bodyBold, fontSize: 11, letterSpacing: 1.5, textTransform: "uppercase" },
+  modesChipsTight: { marginBottom: 0 },
   titleRow: { flexDirection: "row", alignItems: "center", gap: spacing.sm },
   titleBox: { flex: 1, minWidth: 0 },
   title: { color: ONB.text, fontFamily: typography.displayHero, fontSize: 28, lineHeight: 34, letterSpacing: -0.3,

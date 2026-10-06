@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, ActivityIndicator, Pressable } from "react-native";
+import { View, Text, ActivityIndicator, Pressable } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useQuery } from "@tanstack/react-query";
@@ -40,9 +40,8 @@ export default function Explore() {
       ) : loading ? (
         <ActivityIndicator color={ONB.cyan} style={styles.message} testID="explore-loading" />
       ) : (
-        <ScrollView style={styles.scroll} testID="explore-scroll" showsVerticalScrollIndicator={false}
-          bounces={false} contentContainerStyle={{ paddingBottom: insets.bottom + spacing.md }}>
-          <TopicPicker testID="explore" modeIdPrefix="explore" categories={cats.data!} selected={selected} modes={modes} columns={4}
+        <View style={styles.scroll} testID="explore-scroll">
+          <TopicPicker testID="explore" fit modesLabel={t.reading_type} modeIdPrefix="explore" categories={cats.data!} selected={selected} modes={modes} columns={4}
             onToggleCategory={onToggleCategory} onToggleMode={onToggleMode} disabled={save.isPending} lockedModes={isPremium ? undefined : new Set(["lessons"])}
             status={<View testID="explore-save-status" accessibilityLiveRegion="polite">
               <View style={styles.statusRow}>
@@ -51,7 +50,7 @@ export default function Explore() {
               </View>
               {save.isError ? <Text style={styles.saveError} testID="explore-save-error">{t.preferences_save_error}</Text> : null}
             </View>} />
-        </ScrollView>
+        </View>
       )}
     </View>
   );

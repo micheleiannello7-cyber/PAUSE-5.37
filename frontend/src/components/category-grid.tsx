@@ -166,9 +166,9 @@ const useStyles = makeStyles((colors) => ({
     backgroundColor: palette.surface,
   },
   denseTile: { aspectRatio: 0.76, minHeight: 0, borderRadius: 14 },
-  // Riquadro dell'oggetto 3D: in alto, un po' più stretto della tessera, così
-  // finisce sopra alla zona del nome (niente scritte sopra all'icona).
-  artBox: { position: "absolute", top: 2, left: "9%", width: "82%", aspectRatio: 1 },
+  // Riquadro dell'oggetto 3D: in alto, quasi a tutta larghezza della tessera
+  // (icone più grandi, tutte uguali, che riempiono bene il contenitore in vetro).
+  artBox: { position: "absolute", top: 1, left: "2%", width: "96%", aspectRatio: 1 },
   labels: { paddingHorizontal: 4, paddingBottom: 3, alignItems: "center" },
   tileName: { color: palette.text, fontFamily: typography.bodyMedium, fontSize: 12.5, lineHeight: 16, minHeight: 32, textAlign: "center", verticalAlign: "middle" },
   largeName: { fontSize: 15, lineHeight: 18, minHeight: 36 },
